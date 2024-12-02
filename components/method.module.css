@@ -1,0 +1,30 @@
+.method {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    border: 1px dashed #000000;
+    border-radius: 5px;
+    padding: 2px 6px;
+    margin: auto;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 2px 6px;
+    margin: auto;
+}
+.texts
+{
+
+    background-color:transparent;
+    height: 7vh;
+
+}
+.text
+{
+    margin-top: 10px;
+    font-weight: bold;
+
+}
