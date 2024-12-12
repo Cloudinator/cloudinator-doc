@@ -72,12 +72,10 @@ else
     exit 1
 fi
 
-# Push changes to the remote repository in the background with loading animation
-{
-    echo "Choose branch: "
-    read branch
-    git push origin "$branch"
-} &
+
+echo "Choose branch: "
+read branch
+git push origin "$branch"
 
 # Get the process ID of the last command (git push)
 loading_animation $!
