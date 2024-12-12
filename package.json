@@ -10,6 +10,7 @@
     "nextra-theme-docs": "^3.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-type-animation": "^3.2.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },
