@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import {Card} from "@/components/ui/card";
 
-function GettingStarted(): JSX.Element {
+function GettingStarted() {
     return (
         <div className="flex flex-col items-center space-y-8 py-8">
             <Card className="border rounded-lg overflow-hidden shadow-xl w-96">
