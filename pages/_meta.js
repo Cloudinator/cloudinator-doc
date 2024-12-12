@@ -22,9 +22,8 @@ export default {
             }
         }
     },
-    getstart: {
-
-        title: 'Get Started',
+    'getting-started': {
+        title: 'Getting Started',
         theme: {
             breadcrumb: true,
             footer: true,
@@ -33,37 +32,4 @@ export default {
             pagination: true
         }
     },
-    developments: {
-
-        title: 'Developments',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true
-        }
-    },
-    cloud: {
-
-        title: 'Cloud',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true
-        }
-    },
-    contactus: {
-        title: 'Contact ↗',
-        type: 'page',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true,
-    }}
-
 }
