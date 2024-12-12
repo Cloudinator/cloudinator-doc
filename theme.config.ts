@@ -3,10 +3,18 @@
 export default {
     logo: 'Cloudinator',
     project: {
+
+
+
+
+
+
+
+
         link: 'https://cloudinator-ui.naktech.pro',
     },
     docsRepositoryBase: 'https://github.com/your-repo/tree/main/pages',
     footer: {
-        text: 'My Documentation © 2024',
+        text: 'Cloudinator © 2024',
     },
 };

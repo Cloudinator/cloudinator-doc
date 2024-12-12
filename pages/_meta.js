@@ -32,4 +32,14 @@ export default {
             pagination: true
         }
     },
+    installation: {
+        title: 'Installation',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true,
+        }
+    }
 }
