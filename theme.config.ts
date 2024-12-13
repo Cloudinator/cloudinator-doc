@@ -2,31 +2,38 @@
 export default {
   logo: "Cloudinator",
   project: {
-    link: "https://cloudinator-ui.naktech.pro", // Project link in the top-right corner
+    link: "https://cloudinator-ui.naktech.pro",
   },
-  docsRepositoryBase: "https://github.com/your-repo/tree/main/pages", // Link to your docs repo for "Edit this page"
+  docsRepositoryBase: "https://github.com/your-repo/tree/main/pages",
   footer: {
-    text: "Cloudinator © 2024", // Footer text
+    text: "Cloudinator © 2024",
   },
   sidebar: {
-    defaultMenuCollapsed: false, // Keep menus expanded by default
-    toggleButton: true, // Show a toggle button for collapsing the sidebar
+    defaultMenuCollapsed: false,
+    toggleButton: true,
     styles: {
-      item: "hover:bg-[#f0f0f0] hover:text-[#1a73e8]", // Custom hover styles for sidebar items
+      item: "hover:bg-[#f0f0f0] hover:text-[#1a73e8]",
       activeItem: "bg-[#1a73e8] text-white",
     },
   },
   primaryHue: {
-    light: 200, // Customize primary hue for light mode
-    dark: 220, // Customize primary hue for dark mode
+    light: 200,
+    dark: 220,
   },
   nextThemes: {
-    defaultTheme: "light", // Default theme on first load
-    storageKey: "theme", // Key for storing user theme preference
-    themes: ["light", "dark"], // Available themes
+    defaultTheme: "light",
+    storageKey: "theme",
+    themes: ["light", "dark"],
   },
-  i18n: [
-    { locale: "en", text: "English" }, // Internationalization (i18n) options
-    { locale: "fr", text: "French" },
+  pages: {
+    contact: {
+      link: "/contact",
+      title: "Contact Us",
+    },
+  },
+  navLinks: [
+    { title: "Home", link: "/" },
+    { title: "Docs", link: "/docs" },
+    { title: "Contact Us", link: "/contact" },
   ],
 };
