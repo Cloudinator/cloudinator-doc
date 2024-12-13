@@ -1,0 +1,45 @@
+import {SubmitButton} from "../components/contact/SubmitButton";
+import {FormInput} from "../components/contact/FormInput";
+
+## <span className="text-purple-700 font-bold">Contact Us</span>
+
+We would love to hear from you! Please fill out the form below to get in touch with our team.
+
+<form
+    action="#"
+    method="POST"
+    className="max-w-lg mx-auto mt-8"
+>
+    <FormInput
+        label="Name"
+        name="name"
+        required
+    />
+    <FormInput
+        label="Email"
+        name="email"
+        type="email"
+        required
+    />
+    <FormInput
+        label="Subject"
+        name="subject"
+        required
+    />
+    <FormInput
+        label="Message"
+        name="message"
+        textarea
+        required
+    />
+    <SubmitButton>Send Message</SubmitButton>
+</form>
+
+## <span className="text-purple-700 font-bold">Other Ways to React Us</span>
+
+- **Email**: cloudinator@email.com
+- **Phone**: +885 127 856 148
+- **Address**: Toul Kork, Phnom Penh City
+
+Our support team is available **24/7**
+

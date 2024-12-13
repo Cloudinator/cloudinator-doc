@@ -1,6 +1,6 @@
 export default {
-    index: {
-        title: 'Introduction',
+    spring: {
+        title: 'Spring',
         theme: {
             breadcrumb: true,
             footer: true,
@@ -20,26 +20,6 @@ export default {
                 title: 'Table of Contents',
                 backToTop: true,
             }
-        }
-    },
-    'getting-started': {
-        title: 'Getting Started',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true
-        }
-    },
-    installation: {
-        title: 'Installation',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true
         }
     }
 }

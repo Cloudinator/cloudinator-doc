@@ -1,6 +1,6 @@
 export default {
-    index: {
-        title: 'Introduction',
+    nextjs: {
+        title: 'Nextjs',
         theme: {
             breadcrumb: true,
             footer: true,
@@ -22,18 +22,8 @@ export default {
             }
         }
     },
-    'getting-started': {
-        title: 'Getting Started',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true
-        }
-    },
-    installation: {
-        title: 'Installation',
+    react: {
+        title: 'React',
         theme: {
             breadcrumb: true,
             footer: true,
@@ -42,4 +32,5 @@ export default {
             pagination: true
         }
     }
+
 }

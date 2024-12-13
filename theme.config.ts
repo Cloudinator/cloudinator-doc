@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-anonymous-default-export
-export default {
+const themeConfig = {
   logo: "Cloudinator",
   project: {
     link: "https://cloudinator-ui.naktech.pro",
@@ -25,15 +25,13 @@ export default {
     storageKey: "theme",
     themes: ["light", "dark"],
   },
-  pages: {
-    contact: {
-      link: "/contact",
-      title: "Contact Us",
-    },
+  navbar: {
+    links: [
+      { name: "Home", href: "/" },
+      { name: "Docs", href: "/docs" },
+      { name: "About", href: "/about" }, // Added About section
+    ],
   },
-  navLinks: [
-    { title: "Home", link: "/" },
-    { title: "Docs", link: "/docs" },
-    { title: "Contact Us", link: "/contact" },
-  ],
 };
+
+export default themeConfig;

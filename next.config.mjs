@@ -3,8 +3,8 @@ import nextra from 'nextra';
 /** @type {import('next').NextConfig} */
 const withNextra = nextra({
     theme: 'nextra-theme-docs',
-    themeConfig: './theme.config.ts', // Ensure this path is correct
-     // Confirm if this is necessary for your deployment needs
+    themeConfig: './theme.config.ts',// Ensure this path is correct
+
 });
 
 const nextConfig = {
