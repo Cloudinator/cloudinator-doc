@@ -72,5 +72,15 @@ export default {
             pagination: true
         }
     },
+    nuxt: {
+        title: 'Nuxt',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
     
 }
