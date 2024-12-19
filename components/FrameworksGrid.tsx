@@ -4,42 +4,42 @@ const frameworks = [
     {
         name: 'Next.js',
         icon: '/programming/nextjs.png',
-        href: '/Deployment/Frontend/nextjs'
+        href: '/deployment/frontend/nextjs'
     },
     {
         name: 'React',
         icon: '/programming/react.png',
-        href: '/Deployment/Frontend/react'
+        href: '/deployment/frontend/react'
     },
     {
         name: 'Vue',
         icon: '/programming/vue.png',
-        href: '/Deployment/Frontend/vue'
+        href: '/deployment/frontend/vue'
     },
     {
         name: 'Nodejs',
         icon: '/programming/nodejs.png',
-        href: '/Deployment/Backend/nodejs'
+        href: '/deployment/backend/nodejs'
     },
     {
         name: 'Laravel',
         icon: '/programming/laravel.png',
-        href: '/Deployment/Frontend/laravel'
+        href: '/deployment/frontend/laravel'
     },
     {
         name: 'PostgreSQL',
         icon: '/programming/postgres.png',
-        href: '/Deployment/Database/postgres'
+        href: '/deployment/database/postgres'
     },
     {
         name: 'MongoDB',
         icon: '/programming/mongodb.png',
-        href: '/Deployment/Database/mongodb'
+        href: '/deployment/database/mongodb'
     },
     {
         name: 'Spring',
         icon: '/programming/spring.png',
-        href: '/Deployment/Backend/spring'
+        href: '/deployment/backend/spring'
     }
 ]
 
