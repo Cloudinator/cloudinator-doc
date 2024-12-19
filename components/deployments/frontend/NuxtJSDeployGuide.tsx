@@ -32,7 +32,20 @@ export default function NuxtJSDeployGuide() {
           title: "Create a new Nuxt JS Project",
           description: (
             <p>
-              From your Cloudinator dashboard, click on 'Create Project' and select 'Frontend' in project type.
+                From your Cloudinator dashboard, click on '<span className="font-bold dark:font-semibold">Create Project</span>' and select '<span className="font-bold dark:font-semibold">Frontend</span>' in project type.
+                <div className="bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-400 dark:border-yellow-600 p-4 my-4" role="alert">
+                    <p className="font-bold text-orange-500 dark:text-orange-400">Notice!</p>
+                    <p>
+                    Make sure you have a workspace containing your project's site. If you don't have one, you can
+                    <Link
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span className="text-purple-500 dark:text-purple-400"> create one now</span>
+                    </Link>
+                    </p>
+                </div>
             </p>
           ),
           image: (
@@ -58,7 +71,23 @@ export default function NuxtJSDeployGuide() {
         },
         {
           title: "Configure deployment settings",
-          description: "Set the project name, branch, git url and specify subdomain name for your HTML site. You can also setup webhook for continuous deployment.",
+          description: (
+            <p>
+                Set the following settings for your Nuxt JS site:
+                <ul className="list-disc ml-6">
+                    <li>Project name</li>
+                    <li>Git URL</li>
+                    <li>Subdomain name</li>
+                    <li>Webhook for continuous deployment</li>
+                </ul>
+                <div className="bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-400 dark:border-yellow-600 p-4 my-4" role="alert">
+                    <p className="font-bold text-orange-500 dark:text-orange-400">Important!</p>
+                    <p>
+                    Cloudinator will deploy your HTML files using the branch <span className="font-semibold dark:font-bold">main</span>
+                    </p>
+                </div>
+            </p>
+          ),
           image: (
             <Image
               src="/html-guide/configure.png"
