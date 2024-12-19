@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function HTMLDeployGuide() {
+export default function NextjsDeployGuide() {
   const steps = [
     {
       title: "Sign up for a Cloudinator account",
@@ -28,7 +28,7 @@ export default function HTMLDeployGuide() {
       ),
     },
     {
-      title: "Create a new HTML Static Site",
+      title: "Create a deploy Next.js website",
       description: (
         <div>
           From your Cloudinator dashboard, click on '<span className="font-bold dark:font-semibold">Create Project</span>' and select '<span className="font-bold dark:font-semibold">Frontend</span>' in project type.
@@ -58,7 +58,7 @@ export default function HTMLDeployGuide() {
     },
     {
       title: "Choose Git Provider",
-      description: "Choose the Git repository that contains your HTML files. You have the option to choose GitHub or GitLab",
+      description: "Choose the Git repository that contains your Next.js files. You have the option to choose GitHub or GitLab",
       image: (
         <Image
           src="/html-guide/git-provider.png"
@@ -72,7 +72,7 @@ export default function HTMLDeployGuide() {
       title: "Configure Deployment Settings",
       description: (
         <div>
-          Set the following settings for your HTML static site:
+          <h1>Set the following settings for your Next.js:</h1>
           <ul className="list-disc ml-6">
             <li>Project name</li>
             <li>Git URL</li>
@@ -82,7 +82,21 @@ export default function HTMLDeployGuide() {
           <div className="bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-400 dark:border-yellow-600 p-4 my-4" role="alert">
             <p className="font-bold text-orange-500 dark:text-orange-400">Important!</p>
             <p>
-              Cloudinator will deploy your HTML files using the branch <span className="font-semibold dark:font-bold">main</span>
+              Cloudinator will deploy your Next.js files
+              <ul className="list-none ml-6 space-y-1">
+                <li className="flex items-start">
+                  <span className="h-5 w-5 flex items-center justify-center bg-gray-500 dark:bg-gray-700 rounded-full">
+                    <svg className="h-2 w-2 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 13l4 4L19 7"/></svg>
+                  </span>
+                  <span className="ml-3">using branch <span className="font-bold">main</span></span>
+                </li>
+                <li className="flex items-start">
+                  <span className="h-5 w-5 flex items-center justify-center bg-gray-500 dark:bg-gray-700 rounded-full">
+                    <svg className="h-2 w-2 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M5 13l4 4L19 7"/></svg>
+                  </span>
+                  <span className="ml-3">Make sure in your Next.js project file setup <span className="font-bold">standalone</span> in config file</span>
+                </li>
+              </ul>
             </p>
           </div>
         </div>
@@ -109,7 +123,7 @@ export default function HTMLDeployGuide() {
       ),
     },
     {
-      title: "Access your deployed HTML site",
+      title: "Access your deployed Next.js website",
       description: "Once deployment is complete, Cloudinator will provide you with a URL to access your live site.",
       image: (
         <Image
@@ -125,7 +139,7 @@ export default function HTMLDeployGuide() {
   return (
     <div className="w-full bg-purple-50 dark:bg-gray-800 p-8">
       <h1 className="text-purple-700 dark:text-purple-300 text-4xl font-bold mb-8 text-center">
-        How to Deploy HTML on Cloudinator
+        How to Deploy Next.js on Cloudinator
       </h1>
       <div className="max-w-3xl mx-auto space-y-12">
         {steps.map((step, index) => (
