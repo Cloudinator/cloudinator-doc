@@ -14,20 +14,20 @@ const frameworks = [
     {
         name: 'Vue',
         icon: '/programming/vue.png',
-        href: '/docs/frameworks/remix'
+        href: '/Deployment/Frontend/vue'
     },
     {
         name: 'Nodejs',
         icon: '/programming/nodejs.png',
-        href: '/docs/frameworks/astro'
+        href: '/Deployment/Backend/nodejs'
     },
     {
         name: 'Laravel',
         icon: '/programming/laravel.png',
-        href: '/docs/frameworks/laravel'
+        href: '/Deployment/Frontend/laravel'
     },
     {
-        name: 'Postgres',
+        name: 'PostgreSQL',
         icon: '/programming/postgres.png',
         href: '/Deployment/Database/postgres'
     },

@@ -1,4 +1,14 @@
 export default {
+    html: {
+        title: 'HTML',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
     nextjs: {
         title: 'Nextjs',
         theme: {
@@ -31,6 +41,36 @@ export default {
             toc: true,
             pagination: true
         }
-    }
-
+    },
+    laravel: {
+        title: 'Laravel',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
+    vite: {
+        title: 'Vite',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
+    vue: {
+        title: 'Vue',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
+    
 }
