@@ -22,4 +22,24 @@ export default {
       },
     },
   },
+  "getting-started": {
+    title: "Getting Started",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
+  "core-concepts": {
+    title: "Core Concepts",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
 };
