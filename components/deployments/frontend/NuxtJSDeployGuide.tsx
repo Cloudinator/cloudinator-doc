@@ -29,7 +29,7 @@ export default function NuxtJSDeployGuide() {
           ),
         },
         {
-          title: "Create a new Nuxt JS Project",
+          title: "Create a new Nuxtjs Project",
           description: (
             <div>
                 From your Cloudinator dashboard, click on '<span className="font-bold dark:font-semibold">Create Project</span>' and select '<span className="font-bold dark:font-semibold">Frontend</span>' in project type.
@@ -110,12 +110,12 @@ export default function NuxtJSDeployGuide() {
           ),
         },
         {
-          title: "Access your deployed Nuxt JS site",
+          title: "Access your deployed Nuxtjs site",
           description: "Once deployment is complete, Cloudinator will provide you with a URL to access your live site.",
           image: (
             <Image
               src="/placeholder.svg"
-              alt="Access your deployed HTML site"
+              alt="Access your deployed Nuxtjs site"
               height={200}
               width={350}
             />
@@ -126,7 +126,7 @@ export default function NuxtJSDeployGuide() {
       return (
         <div className="w-full bg-purple-50 p-8">
           <h1 className="text-purple-700 text-4xl font-bold mb-8 text-center">
-            How to Deploy Nuxt JS on Cloudinator
+            How to Deploy Nuxt.js on Cloudinator
           </h1>
           <div className="max-w-3xl mx-auto space-y-12">
             {steps.map((step, index) => (

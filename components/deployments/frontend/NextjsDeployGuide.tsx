@@ -81,7 +81,7 @@ export default function NextjsDeployGuide() {
           </ul>
           <div className="bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-400 dark:border-yellow-600 p-4 my-4" role="alert">
             <p className="font-bold text-orange-500 dark:text-orange-400">Important!</p>
-            <p>
+            <div>
               Cloudinator will deploy your Next.js files
               <ul className="list-none ml-6 space-y-1">
                 <li className="flex items-start">
@@ -97,7 +97,7 @@ export default function NextjsDeployGuide() {
                   <span className="ml-3">Make sure in your Next.js project file setup <span className="font-bold">standalone</span> in config file</span>
                 </li>
               </ul>
-            </p>
+            </div>
           </div>
         </div>
       ),
