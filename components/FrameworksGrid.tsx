@@ -7,19 +7,29 @@ const frameworks = [
         href: '/deployment/frontend/nextjs'
     },
     {
-        name: 'React',
+        name: 'React.js',
         icon: '/programming/react.png',
         href: '/deployment/frontend/react'
     },
     {
-        name: 'Vue',
+        name: 'Vue.js',
         icon: '/programming/vue.png',
         href: '/deployment/frontend/vue'
     },
     {
-        name: 'Nodejs',
-        icon: '/programming/nodejs.png',
-        href: '/deployment/backend/nodejs'
+        name: 'Nuxt.js',
+        icon: '/programming/nuxt.png',
+        href: '/deployment/frontend/nuxt'
+    },
+    {
+        name: 'HTML',
+        icon: '/programming/html.png',
+        href: '/deployment/frontend/html'
+    },
+    {
+        name: 'Vite',
+        icon: '/programming/vite.png',
+        href: '/deployment/frontend/vite'
     },
     {
         name: 'Laravel',

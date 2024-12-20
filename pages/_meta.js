@@ -41,5 +41,25 @@ export default {
             toc: true,
             pagination: true
         }
-    }
+    },
+    'deployment': {
+        title: 'Deployment',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
+    'spring-microservice': {
+        title: 'Spring-Microservice',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
 }

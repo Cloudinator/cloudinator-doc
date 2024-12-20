@@ -21,5 +21,25 @@ export default {
                 backToTop: true,
             }
         }
-    }
+    },
+    nodejs: {
+        title: 'Nodejs',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
+    nestjs: {
+        title: 'NestJS',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
 }

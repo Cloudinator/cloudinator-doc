@@ -2,7 +2,7 @@
 const themeConfig = {
   logo: "Cloudinator",
   project: {
-    link: "https://cloudinator-ui.naktech.pro",
+    link: "https://github.com/Cloudinator",
   },
   docsRepositoryBase: "https://github.com/your-repo/tree/main/pages",
   footer: {
