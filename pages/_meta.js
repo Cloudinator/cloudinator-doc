@@ -62,4 +62,14 @@ export default {
       pagination: true,
     },
   },
+  resource: {
+    title: "Resource",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
 };

@@ -48,7 +48,11 @@ export default function HTMLDeployGuide() {
             <p>
               Make sure you have a workspace containing your project's site. If
               you don't have one, you can
-              <Link href="#" target="_blank" rel="noopener noreferrer">
+              <Link
+                href="/spring-microservice/workspace"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="text-purple-500 dark:text-purple-400">
                   {" "}
                   create one now

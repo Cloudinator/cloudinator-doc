@@ -1,6 +1,6 @@
 export default {
-  create: {
-    title: "Create",
+  introduction: {
+    title: "Introduction",
     theme: {
       breadcrumb: true,
       footer: true,
@@ -20,26 +20,6 @@ export default {
         title: "Table of Contents",
         backToTop: true,
       },
-    },
-  },
-  workspace: {
-    title: "Workspace",
-    theme: {
-      breadcrumb: true,
-      footer: true,
-      sidebar: true,
-      toc: true,
-      pagination: true,
-    },
-  },
-  deployment: {
-    title: "Deployment",
-    theme: {
-      breadcrumb: true,
-      footer: true,
-      sidebar: true,
-      toc: true,
-      pagination: true,
     },
   },
 };
