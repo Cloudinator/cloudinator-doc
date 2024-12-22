@@ -14,9 +14,9 @@ export function ContentComingSoon() {
         Cloudinator
       </h2>
       <p className="text-sm text-gray-600 dark:text-gray-300 text-center mb-4">
-        Stay tuned for updates!
+        Stay tuned for more content!
       </p>
-      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-3 overflow-hidden">
+      {/* <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 mb-3 overflow-hidden">
         <motion.div
           className="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full"
           initial={{ width: 0 }}
@@ -26,7 +26,7 @@ export function ContentComingSoon() {
       </div>
       <p className="text-xs text-gray-500 dark:text-gray-400 text-center mb-4">
         Progress: 29%
-      </p>
+      </p> */}
       
     </motion.div>
   );

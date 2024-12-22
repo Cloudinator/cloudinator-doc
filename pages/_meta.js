@@ -22,6 +22,16 @@ export default {
       },
     },
   },
+  "tutorial": {
+    title: "Tutorial",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
   "getting-started": {
     title: "Getting Started",
     theme: {

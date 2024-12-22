@@ -1,17 +1,19 @@
-"use client";
+"use client"
 
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import AnimatedHeroText from "./AnimatedHeroText";
+import React from "react"
+import Link from "next/link"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import AnimatedHeroText from "./AnimatedHeroText"
+import { Cloud, Container, GitBranch, Terminal } from 'lucide-react'
+import { FeatureCard } from "../FeatureCard"
+import { CodePreview } from "../CodePreview"
 
 interface DocHeroProps {
-  title: string;
-  description: string;
-  getStartedHref?: string;
-  githubHref?: string;
+  title: string
+  description: string
+  getStartedHref?: string
+  githubHref?: string
 }
 
 const DocHero: React.FC<DocHeroProps> = ({
@@ -28,7 +30,7 @@ const DocHero: React.FC<DocHeroProps> = ({
         staggerChildren: 0.2,
       },
     },
-  };
+  }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -40,7 +42,7 @@ const DocHero: React.FC<DocHeroProps> = ({
         ease: "easeOut",
       },
     },
-  };
+  }
 
   const floatingAnimation = {
     y: ["-10%", "10%"],
@@ -52,7 +54,7 @@ const DocHero: React.FC<DocHeroProps> = ({
         ease: "easeInOut",
       },
     },
-  };
+  }
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-primary/20 to-background dark:from-primary/10 dark:to-background">
@@ -72,7 +74,7 @@ const DocHero: React.FC<DocHeroProps> = ({
         />
       </div>
       <motion.div
-        className="relative pt-16 pb-20 sm:pt-24 sm:pb-32"
+        className="relative mx-auto max-w-7xl px-4 pt-16 pb-20 sm:px-6 sm:pt-24 sm:pb-32 lg:px-8"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
@@ -93,20 +95,9 @@ const DocHero: React.FC<DocHeroProps> = ({
           >
             {description}
           </motion.p>
+
           <motion.div
-            className="absolute left-0 bottom-1/2 transform -translate-y-1/2 hidden lg:block"
-            animate={floatingAnimation}
-          >
-            <Image
-              src="/images/cloud.svg"
-              alt="Decorative image"
-              width={100}
-              height={100}
-              className="opacity-50 dark:opacity-30"
-            />
-          </motion.div>
-          <motion.div
-            className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8 gap-6"
+            className="mt-8 max-w-md mx-auto sm:flex sm:justify-center md:mt-8 gap-6"
             variants={itemVariants}
           >
             <motion.div
@@ -139,21 +130,44 @@ const DocHero: React.FC<DocHeroProps> = ({
             </motion.div>
           </motion.div>
         </div>
+
         <motion.div
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 hidden lg:block"
-          animate={floatingAnimation}
+          variants={itemVariants}
+          className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4"
         >
-          <Image
-            src="/images/cloud.svg"
-            alt="Decorative image"
-            width={100}
-            height={100}
-            className="opacity-50 dark:opacity-30"
+          <FeatureCard
+            icon={Cloud}
+            title="Cloud Native"
+            description="Built for modern cloud infrastructure with scalability in mind"
+          />
+          <FeatureCard
+            icon={Container}
+            title="Container Ready"
+            description="Deploy containerized applications with zero configuration"
+          />
+          <FeatureCard
+            icon={GitBranch}
+            title="Git Integration"
+            description="Seamless integration with your Git workflow"
+          />
+          <FeatureCard
+            icon={Terminal}
+            title="CLI Tools"
+            description="Powerful command-line tools for automation"
           />
         </motion.div>
+
+        <motion.div
+          variants={itemVariants}
+          className="mt-16 lg:mt-24"
+        >
+          <CodePreview />
+        </motion.div>
+
       </motion.div>
     </div>
-  );
-};
+  )
+}
 
-export default DocHero;
+export default DocHero
+
