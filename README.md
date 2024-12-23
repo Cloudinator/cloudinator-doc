@@ -6,10 +6,17 @@ Cloudinator is a platform that assists with deployment using devops methodology 
 
 ### Quick Start
 
-In our home you can get start with **Get Start** button it will take you to basic step to work with our project 😍.
+In our homepage, you can get started by clicking the 'Get Started' button, which will guide you through the basic steps to work with our project. 😍
 
 <img width="1280" alt="doc-quickstart" src="https://github.com/user-attachments/assets/f40dbf5a-3408-4b9e-acb9-b623796e9dea" />
 
+### Prerequisites
+
+Let's start by ensuring we have the exact prerequisites listed. Here is what you need to have so far:
+
+**-** Operating System (Windows, macOS, or Linux)
+**-** Concept DevOps
+**-** Understanding of Basic Programming
 
 
 ```bash
