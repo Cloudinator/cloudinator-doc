@@ -65,15 +65,17 @@ export default function NextjsGitHubLink({ repoUrl, repoName }: GitHubLinkProps)
         <CardDescription>View and copy the repository link</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center space-x-2 mb-4">
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
           <Input value={repoUrl} readOnly className="flex-grow" />
-          <Button onClick={copyToClipboard} className="border-purple-300 border">
-            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-          </Button>
-          <Button onClick={redirectToGitHub} variant="default" className="border border-purple-300 whitespace-nowrap">
+          <div className="flex space-x-2">
+            <Button onClick={copyToClipboard} className="border-purple-300 border">
+              {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+            </Button>
+            <Button onClick={redirectToGitHub} variant="default" className="border border-purple-300 whitespace-nowrap">
               <ExternalLink className="h-4 w-4 mr-2" />
               View on GitHub
             </Button>
+          </div>
         </div>
 
         <div className="mt-4">

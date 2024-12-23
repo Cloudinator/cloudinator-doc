@@ -7,28 +7,37 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input"
 import { Github, Copy, Check, Folder, File, ExternalLink } from 'lucide-react'
 import { GitHubLinkProps, RepoItem } from '@/types/github'
-import { RepoTree } from '../html/RepoTree'
+import { RepoTree } from '../../frontend/html/RepoTree'
 
-const nuxtjsRepoStructure: RepoItem[] = [
+const nestjsRepoStructure: RepoItem[] = [
+  {
+    name: 'app', type: 'directory', children: [
+      { name: 'favicon.ico', type: 'file' },
+      { name: 'global.css', type: 'file' },
+      { name: 'layout.tsx', type: 'file' },
+      { name: 'page.tsx', type: 'file' },
+    ]
+  },
   {
     name: 'public', type: 'directory', children: [
-      { name: 'favicon.ico', type: 'file' },
-      { name: 'robots.txt', type: 'file' },
+      { name: 'file.svg', type: 'file' },
+      { name: 'globe.svg', type: 'file' },
+      { name: 'next.svg', type: 'file' },
+      { name: 'vercel.svg', type: 'file' },
+      { name: 'window.svg', type: 'file' },
     ]
   },
-  {
-    name: 'server', type: 'directory', children: [
-      { name: 'tsconfig.json', type: 'file' },
-    ]
-  },
-  { name: 'app.vue', type: 'file' },
-  { name: 'package-lock.json', type: 'file' },
+  { name: 'eslint.config.ts', type: 'file' },
   { name: 'package.json', type: 'file' },
+  { name: 'package-lock.json', type: 'file' },
+  { name: 'postcss.config.mjs', type: 'file' },
   { name: 'README.md', type: 'file' },
+  { name: 'tailwind.config.ts', type: 'file' },
   { name: 'tsconfig.json', type: 'file' },
+
 ]
 
-export default function NuxtjsGitHubLink({ repoUrl, repoName }: GitHubLinkProps) {
+export default function NextjsGitHubLink({ repoUrl, repoName }: GitHubLinkProps) {
   const [copied, setCopied] = useState(false)
 
   const copyToClipboard = async () => {
@@ -41,7 +50,7 @@ export default function NuxtjsGitHubLink({ repoUrl, repoName }: GitHubLinkProps)
     }
   }
 
-
+  
   const redirectToGitHub = () => {
     window.open(repoUrl, '_blank', 'noopener,noreferrer')
   }
@@ -72,7 +81,7 @@ export default function NuxtjsGitHubLink({ repoUrl, repoName }: GitHubLinkProps)
         <div className="mt-4">
           <h3 className="text-lg font-semibold mb-2">Repository Structure</h3>
           <div className="border rounded-md p-4 bg-gray-50 dark:bg-gray-900">
-            <RepoTree items={nuxtjsRepoStructure} />
+            <RepoTree items={nestjsRepoStructure} />
           </div>
         </div>
       </CardContent>

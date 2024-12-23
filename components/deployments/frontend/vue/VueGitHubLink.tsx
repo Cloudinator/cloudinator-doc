@@ -17,26 +17,34 @@ const vueRepoStructure: RepoItem[] = [
   },
   {
     name: 'src', type: 'directory', children: [
-      { name: 'assets', type: 'directory', children: [
-        { name: 'base.css', type: 'file' },
-        { name: 'logo.svg', type: 'file' },
-        { name: 'main.css', type: 'file' },
-      ]},
-      { name: 'components', type: 'directory', children: [
-        { name: '_tests_', type: 'directory', children: [
-          { name: 'HelloWorld.spec.ts', type: 'file' },
-        ]},
-        { name: 'icons', type: 'directory', children: [
-          { name: 'IconCommunity.vue', type: 'file' },
-          { name: 'IconDocumentation.vue', type: 'file' },
-          { name: 'IconEcosystem.vue', type: 'file' },
-          { name: 'IconSupport.vue', type: 'file' },
-          { name: 'IconTooling.vue', type: 'file' },
-        ]},
-        { name: 'HelloWorld.vue', type: 'file' },
-        { name: 'TheWelcome.vue', type: 'file' },
-        { name: 'WelcomeItem.vue', type: 'file' },
-      ]},
+      {
+        name: 'assets', type: 'directory', children: [
+          { name: 'base.css', type: 'file' },
+          { name: 'logo.svg', type: 'file' },
+          { name: 'main.css', type: 'file' },
+        ]
+      },
+      {
+        name: 'components', type: 'directory', children: [
+          {
+            name: '_tests_', type: 'directory', children: [
+              { name: 'HelloWorld.spec.ts', type: 'file' },
+            ]
+          },
+          {
+            name: 'icons', type: 'directory', children: [
+              { name: 'IconCommunity.vue', type: 'file' },
+              { name: 'IconDocumentation.vue', type: 'file' },
+              { name: 'IconEcosystem.vue', type: 'file' },
+              { name: 'IconSupport.vue', type: 'file' },
+              { name: 'IconTooling.vue', type: 'file' },
+            ]
+          },
+          { name: 'HelloWorld.vue', type: 'file' },
+          { name: 'TheWelcome.vue', type: 'file' },
+          { name: 'WelcomeItem.vue', type: 'file' },
+        ]
+      },
       { name: 'App.vue', type: 'file' },
       { name: 'main.ts', type: 'file' },
     ],
@@ -68,7 +76,7 @@ export default function VueGitHubLink({ repoUrl, repoName }: GitHubLinkProps) {
     }
   }
 
-  
+
   const redirectToGitHub = () => {
     window.open(repoUrl, '_blank', 'noopener,noreferrer')
   }
@@ -83,15 +91,17 @@ export default function VueGitHubLink({ repoUrl, repoName }: GitHubLinkProps) {
         <CardDescription>View and copy the repository link</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center space-x-2 mb-4">
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
           <Input value={repoUrl} readOnly className="flex-grow" />
-          <Button onClick={copyToClipboard} className="border-purple-300 border">
-            {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
-          </Button>
-          <Button onClick={redirectToGitHub} variant="default" className="border border-purple-300 whitespace-nowrap">
+          <div className="flex space-x-2">
+            <Button onClick={copyToClipboard} className="border-purple-300 border">
+              {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+            </Button>
+            <Button onClick={redirectToGitHub} variant="default" className="border border-purple-300 whitespace-nowrap">
               <ExternalLink className="h-4 w-4 mr-2" />
               View on GitHub
             </Button>
+          </div>
         </div>
 
         <div className="mt-4">

@@ -37,6 +37,11 @@ const frameworks = [
         href: '/deployment/frontend/laravel'
     },
     {
+        name: 'Nest.js',
+        icon: '/programming/nestjs.png',
+        href: '/deployment/backend/nest'
+    },
+    {
         name: 'PostgreSQL',
         icon: '/programming/postgres.png',
         href: '/deployment/database/postgres'

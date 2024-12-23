@@ -23,7 +23,7 @@ export default {
         }
     },
     nodejs: {
-        title: 'Nodejs',
+        title: 'NodeJS',
         theme: {
             breadcrumb: true,
             footer: true,

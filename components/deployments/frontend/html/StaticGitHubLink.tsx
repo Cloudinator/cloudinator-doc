@@ -43,13 +43,13 @@ export default function StaticGitHubLink({ repoUrl, repoName }: GitHubLinkProps)
           <Github className="h-6 w-6" />
           {repoName}
         </CardTitle>
-        <CardDescription>View, copy, or open the repository link</CardDescription>
+        <CardDescription>View and copy the repository link</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
           <Input value={repoUrl} readOnly className="flex-grow" />
           <div className="flex space-x-2">
-            <Button onClick={copyToClipboard} className="border-purple-300 border" aria-label={copied ? "Copied" : "Copy to clipboard"}>
+            <Button onClick={copyToClipboard} className="border-purple-300 border">
               {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
             </Button>
             <Button onClick={redirectToGitHub} variant="default" className="border border-purple-300 whitespace-nowrap">
