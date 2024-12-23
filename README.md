@@ -1,8 +1,13 @@
 This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) that will walk you through how to use our platform.
 
-## What is Cloudinator
+## What is Cloudinator?
 
 Cloudinator is a platform that assists with deployment using devops methodology that lets you deploy both monolithic and microservices services for your website.
+
+### Quick Start
+
+[Cloudinator-Slide.pptx](https://github.com/user-attachments/files/18224361/Cloudinator-Slide.pptx)
+
 
 ```bash
 npm run dev
