@@ -1,8 +1,8 @@
-This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) that will walk you through how to use our platform.
 
-## Getting Started
+## What is Cloudinator
 
-First, run the development server:
+Cloudinator is a platform that assists with deployment using devops methodology that lets you deploy both monolithic and microservices services for your website.
 
 ```bash
 npm run dev
