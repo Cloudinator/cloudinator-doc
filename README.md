@@ -4,13 +4,13 @@ This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/
 
 **[`Cloudinator`](https://cloudinator-document.soben.me/)** is a platform that assists with deployment using devops methodology that lets you deploy both monolithic and microservices services for your website.
 
-### Quick Start
+### [`Quick Start`](https://cloudinator-document.soben.me/getting-started)
 
 In our homepage, you can get started by clicking the 'Get Started' button, which will guide you through the basic steps to work with our project. 😍
 
 <img width="1280" alt="doc-quickstart" src="https://github.com/user-attachments/assets/f40dbf5a-3408-4b9e-acb9-b623796e9dea" />
 
-### Prerequisites
+### [`Prerequisites`](https://cloudinator-document.soben.me/getting-started#prerequisites)
 
 Before you begin, ensure you have the following:
 
