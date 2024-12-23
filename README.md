@@ -1,4 +1,4 @@
-This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) that will walk you through how to use our platform 😍.
+This is a [`Document of Cloudinator`]([https://cloudinator-doc-vercel.vercel.app/](https://cloudinator-document.soben.me/)) that will walk you through how to use our platform 😍.
 
 ## What is Cloudinator?
 
