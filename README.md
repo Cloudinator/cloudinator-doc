@@ -6,7 +6,8 @@ Cloudinator is a platform that assists with deployment using devops methodology 
 
 ### Quick Start
 
-![LA](https://github.com/user-attachments/assets/83ea89ac-d9c8-4ce3-9504-76c8b087f700)
+<img width="1280" alt="doc-quickstart" src="https://github.com/user-attachments/assets/f40dbf5a-3408-4b9e-acb9-b623796e9dea" />
+
 
 
 ```bash
