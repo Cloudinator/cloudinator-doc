@@ -12,11 +12,11 @@ In our homepage, you can get started by clicking the 'Get Started' button, which
 
 ### Prerequisites
 
-Let's start by ensuring we have the exact prerequisites listed. Here is what you need to have so far:
+Before you begin, ensure you have the following:
 
-**-** Operating System (Windows, macOS, or Linux)
-**-** Concept DevOps
-**-** Understanding of Basic Programming
+- Operating System (Windows, macOS, or Linux)
+- Concept of DevOps
+- Understanding of Basic Programming
 
 
 ```bash
