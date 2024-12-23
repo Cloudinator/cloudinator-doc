@@ -1,10 +1,12 @@
-This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) that will walk you through how to use our platform.
+This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) that will walk you through how to use our platform 😍.
 
 ## What is Cloudinator?
 
 Cloudinator is a platform that assists with deployment using devops methodology that lets you deploy both monolithic and microservices services for your website.
 
 ### Quick Start
+
+In our home you can get start with **Get Start** button it will take you to basic step to work with our project 😍.
 
 <img width="1280" alt="doc-quickstart" src="https://github.com/user-attachments/assets/f40dbf5a-3408-4b9e-acb9-b623796e9dea" />
 
