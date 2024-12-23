@@ -18,6 +18,11 @@ Before you begin, ensure you have the following:
 - Concept of DevOps
 - Understanding of Basic Programming
 
+<img width="1280" alt="readmi-getstartpage" src="https://github.com/user-attachments/assets/156d7382-e7e3-4cb7-aaa1-8b6bea5f04ba" />
+
+### Installation
+
+
 
 ```bash
 npm run dev
