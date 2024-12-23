@@ -20,7 +20,7 @@ Before you begin, ensure you have the following:
 
 <img width="1280" alt="readmi-getstartpage" src="https://github.com/user-attachments/assets/156d7382-e7e3-4cb7-aaa1-8b6bea5f04ba" />
 
-### Installation
+### [`Installation`](https://cloudinator-document.soben.me/installation)
 
 You can select services, you want to deploy 😍.
 
