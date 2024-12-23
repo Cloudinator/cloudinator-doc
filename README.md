@@ -1,4 +1,4 @@
-This is a [Document of Cloudinator]([https://cloudinator-doc-vercel.vercel.app/]) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a [`Document of Cloudinator`](https://cloudinator-doc-vercel.vercel.app/) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
