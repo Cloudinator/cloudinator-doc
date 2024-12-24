@@ -5,9 +5,7 @@ const themeConfig = {
     link: "https://github.com/Cloudinator",
   },
   docsRepositoryBase: "https://github.com/your-repo/tree/main/pages",
-  footer: {
-    text: "Cloudinator © 2024",
-  },
+  footer: false,
   sidebar: {
     defaultMenuCollapsed: false,
     toggleButton: true,

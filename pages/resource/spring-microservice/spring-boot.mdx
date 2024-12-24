@@ -1,18 +1,66 @@
+import {TomCat} from "@/components/Icon";
+
 ## <span className="text-purple-700 font-bold">Spring Boot</span>
 
 ### <span className="text-purple-500 font-semibold">Introduction to Spring Boot</span>
 
 **Spring Boot** is a framework that provides a streamlined and efficient way to create stand-alone, production-ready Spring-based applications with minimal configuration. It is built on top of the Spring Framework and aims to simplify the process of building and deploying microservices and other types of applications.
 
-###  <span className="text-purple-500 font-semibold">Key Features of Spring Boot</span>
+<div className="w-full flex justify-center py-4">
+    <img src="/programming/spring.png" width="160px" height="160px" alt="Spring Boot Image" />
+</div>
 
-**1. Stand-Alone Applications**
 
-Spring Boot allows developers to create applications that run independently, without the need for an external application server. This is achieved through embedded server support.
+### <span className="text-purple-500 font-semibold">Key Features of Spring Boot</span>
+
+#### <span className="text-purple-400 font-semibold">Stand-Alone Applications</span>
+
+##### <span className="text-gray-600 font-semibold">Introduction</span>
+
+Spring Boot revolutionizes Java application development by enabling the creation of self-contained, production-grade applications that can run independently. This document explores the key aspects of Spring Boot's stand-alone application capabilities and how to implement them effectively.
+
+##### <span className="text-gray-600 font-semibold">Key Features of Stand-Alone Applications</span>
+
+**a. Embedded Server Support**
+
+Spring Boot includes embedded server support out of the box, eliminating the need for external application server deployment. The most commonly used servers include:
+
+- Tomcat (default for web applications)
+- Jetty
+- Undertow
+
+These servers are automatically configured and started when the application launches.
+
+**b. Self-Contained JAR Files**
+
+Spring Boot applications can be packaged as executable JAR files that include:
+
+- Application Code
+- Required dependencies
+- Embedded server
+- Application configuration
+- Static resources
+
+**c. Configuration Management**
+
+Stand-alone applications benefit from Spring Boot's robust configuration capabilities:
+
+- Application properties can be externalized
+- Environment-specific configurations
+- Easy override mechanisms
+- Support for multiple configuration formats (properties, YAML)
+
+### <span className="text-purple-500 font-semibold">Best Practice</span>
+
+===========================================================================
 
 **2. Embedded Servers**
 
 Spring Boot includes embedded servers like Tomcat, Jetty, and Undertow, eliminating the need to set up and manage external servers. This feature is particularly useful for microservices, where each service can be packaged and run independently.
+
+<div className="w-full flex justify-center py-4">
+    <TomCat />
+</div>
 
 **3. Minimal Configuration**
 
