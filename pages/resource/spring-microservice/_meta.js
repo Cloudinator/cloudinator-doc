@@ -42,4 +42,14 @@ export default {
       pagination: true,
     },
   },
+  "spring-boot": {
+    title: "Spring Boot",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  }
 };
