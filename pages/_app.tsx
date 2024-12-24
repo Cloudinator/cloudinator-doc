@@ -5,6 +5,8 @@ import { GlobalLoader, LoadingProvider } from "@/components/Loading";
 import BackToTopButton from "@/components/BackToTopButton";
 import MaintenanceBanner from "@/components/MaintenanceBanner";
 import { Poppins } from "next/font/google";
+import SnowfallToggleButton from "@/components/SnowfallToggleButton";
+import FooterBanner from "@/components/FooterBanner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,6 +23,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           <MaintenanceBanner />
           <Component {...pageProps} />
           <BackToTopButton />
+          <SnowfallToggleButton />
+          <FooterBanner />
           <GlobalLoader />
         </LoadingProvider>
       </main>
