@@ -76,7 +76,7 @@ const LeafFall: React.FC<LeafTheme> = ({ color, count, speed, wind }) => {
   return (
     <div
       style={{
-        position: "relative",
+        position: "fixed",
         width: "100%",
         height: "100%",
         overflow: "hidden",
@@ -93,10 +93,11 @@ const LeafFall: React.FC<LeafTheme> = ({ color, count, speed, wind }) => {
             color: color,
             fontSize: `${leaf.size}px`,
             opacity: leaf.opacity,
-            transition: "left 0.05s linear, top 0.05s linear",
+            transition: "left 0.2s linear, top 0.2s linear",
+            willChange: "left, top",
           }}
         >
-          ☘️
+          <Leaf />
         </div>
       ))}
     </div>
@@ -108,8 +109,8 @@ const defaultThemes: Theme[] = [
     name: "Snow Falling",
     type: "snow",
     color: "#fff",
-    snowflakeCount: 200,
-    speed: [0.5, 3],
+    snowflakeCount: 160,
+    speed: [0.5, 2],
     wind: [-0.5, 2],
   },
   {
@@ -129,6 +130,14 @@ const ThemeToggleButton: React.FC<ThemeToggleProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedTheme, setSelectedTheme] = useState<Theme | null>(null);
 
+  // Load theme preference from localStorage on mount
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("selectedTheme");
+    if (savedTheme) {
+      setSelectedTheme(JSON.parse(savedTheme));
+    }
+  }, []);
+
   useEffect(() => {
     const toggleVisibility = () => {
       setIsVisible(window.pageYOffset > 300);
@@ -136,6 +145,15 @@ const ThemeToggleButton: React.FC<ThemeToggleProps> = ({
     window.addEventListener("scroll", toggleVisibility);
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
+
+  // Save theme preference to localStorage whenever it changes
+  useEffect(() => {
+    if (selectedTheme) {
+      localStorage.setItem("selectedTheme", JSON.stringify(selectedTheme));
+    } else {
+      localStorage.removeItem("selectedTheme");
+    }
+  }, [selectedTheme]);
 
   return (
     <>
@@ -198,12 +216,6 @@ const ThemeToggleButton: React.FC<ThemeToggleProps> = ({
                   >
                     <div className="font-medium dark:text-white">
                       {theme.name}
-                    </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                      {theme.type === "snow"
-                        ? `Snowflakes: ${theme.snowflakeCount}`
-                        : `Leaves: ${theme.count}`}{" "}
-                      • Speed: {theme.speed[0]}-{theme.speed[1]}x
                     </div>
                   </button>
                 ))}

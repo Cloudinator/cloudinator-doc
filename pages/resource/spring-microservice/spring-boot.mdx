@@ -13,13 +13,9 @@ import {TomCat} from "@/components/Icon";
 
 ### <span className="text-purple-500 font-semibold">Key Features of Spring Boot</span>
 
-#### <span className="text-purple-400 font-semibold">Stand-Alone Applications</span>
-
-##### <span className="text-gray-600 font-semibold">Introduction</span>
+##### <span className="text-gray-500 font-semibold">Stand-Alone Applications</span>
 
 Spring Boot revolutionizes Java application development by enabling the creation of self-contained, production-grade applications that can run independently. This document explores the key aspects of Spring Boot's stand-alone application capabilities and how to implement them effectively.
-
-##### <span className="text-gray-600 font-semibold">Key Features of Stand-Alone Applications</span>
 
 **a. Embedded Server Support**
 
@@ -50,21 +46,35 @@ Stand-alone applications benefit from Spring Boot's robust configuration capabil
 - Easy override mechanisms
 - Support for multiple configuration formats (properties, YAML)
 
-### <span className="text-purple-500 font-semibold">Best Practice</span>
+##### <span className="text-gray-500 font-semibold">Embedded Servers</span>
 
-===========================================================================
+Spring Boot includes embedded servers like **Tomcat**, Jetty, and Undertow, eliminating the need to set up and manage external servers. This feature is particularly useful for microservices, where each service can be packaged and run independently. An **embedded server** is a lightweight server that comes bundled within your application JAR/WAR file. When you run your Spring Boot application, the embedded server starts automatically as part of your application process, rather than running as a separate process like traditional application servers.
 
-**2. Embedded Servers**
+Key Embedded Servers in Spring Boot:
 
-Spring Boot includes embedded servers like Tomcat, Jetty, and Undertow, eliminating the need to set up and manage external servers. This feature is particularly useful for microservices, where each service can be packaged and run independently.
+- **Tomcat**: The default embedded server for Spring Boot web applications. It is excellent for serving web applications and JSPs, lightweight, well-tested and has default port **8080**
+
+- **Jetty**: Another popular embedded server that is known for its speed and scalability. It is great for handling WebSocket connections and popular in embedded and cloud environments.    
+
+- **Undertow**: A high-performance web server that is designed for modern applications. It is known for its asynchronous capabilities and is well-suited for microservices and reactive applications.
 
 <div className="w-full flex justify-center py-4">
     <TomCat />
 </div>
 
-**3. Minimal Configuration**
+##### <span className="text-gray-500 font-semibold">Minimal Configuration</span>
 
 With Spring Boot's opinionated defaults, developers can focus on application logic rather than boilerplate configurations. It comes with sensible default settings and automatically configures essential components.
+
+- Auto-Configuration: Spring Boot automatically configures beans based on the classpath and dependencies present in the project.
+- Starter Dependencies: Spring Boot Starter dependencies simplify the inclusion of common libraries and frameworks by providing pre-configured dependencies.
+- Default Property Settings: Spring Boot provides sensible default settings for various properties, reducing the need for manual configuration.
+
+Key Areas of Auto-Configuration:
+
+- Database Configuration
+- Security Defaults
+- Web MVC Configuration
 
 **4. Microservices Support**
 

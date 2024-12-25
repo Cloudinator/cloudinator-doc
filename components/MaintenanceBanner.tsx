@@ -20,7 +20,7 @@ export default function MaintenanceBanner() {
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
           className="sticky top-0 z-50 bg-gradient-to-r from-indigo-500 to-purple-600 shadow-lg"
         >
-          <div className="max-w-7xl mx-auto py-3 px-4">
+          <div className="max-w-7xl mx-auto py-3 px-4 sm:py-4">
             <div className="flex items-center justify-center">
               <div className="flex items-center space-x-3">
                 <AlertCircle className="h-5 w-5 text-white animate-pulse" />

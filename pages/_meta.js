@@ -82,4 +82,15 @@ export default {
       pagination: true,
     },
   },
+  about: {
+    title: "About",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
+
 };
