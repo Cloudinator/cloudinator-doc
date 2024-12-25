@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <LoadingProvider>
           <MaintenanceBanner />
           <ScrollProgressBar />
-          <HeaderNav /> 
+          <HeaderNav />
           <Component {...pageProps} />
           <SnowfallToggleButton />
           <FooterBanner />

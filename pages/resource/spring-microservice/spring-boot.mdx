@@ -54,7 +54,7 @@ Key Embedded Servers in Spring Boot:
 
 - **Tomcat**: The default embedded server for Spring Boot web applications. It is excellent for serving web applications and JSPs, lightweight, well-tested and has default port **8080**
 
-- **Jetty**: Another popular embedded server that is known for its speed and scalability. It is great for handling WebSocket connections and popular in embedded and cloud environments.    
+- **Jetty**: Another popular embedded server that is known for its speed and scalability. It is great for handling WebSocket connections and popular in embedded and cloud environments.
 
 - **Undertow**: A high-performance web server that is designed for modern applications. It is known for its asynchronous capabilities and is well-suited for microservices and reactive applications.
 
@@ -76,9 +76,30 @@ Key Areas of Auto-Configuration:
 - Security Defaults
 - Web MVC Configuration
 
-**4. Microservices Support**
+##### <span className="text-gray-500 font-semibold">Microservices Support</span>
 
-Spring Boot is designed with microservices architecture in mind. It integrates seamlessly with Spring Cloud to provide features like service discovery, configuration management, and distributed tracing.
+Spring Boot is designed with microservices architecture in mind. It integrates seamlessly with Spring Cloud to provide features like service discovery, configuration management, and distributed tracing. Spring Boot's microservices support revolves around these key capabilities:
+
+**Service Discovery**
+- Uses Netflix Eureka or Consul to automatically register and locate services
+- Services can find and communicate with each other without hardcoded URLs
+- Enables dynamic scaling and failover
+
+**Configuration Management**
+- Spring Cloud Config provides centralized configuration for all microservices
+- Configurations can be updated without redeploying services
+- Supports version control and environment-specific configs
+
+**Distributed Tracing**
+- Tools like Sleuth and Zipkin track requests across multiple services
+- Helps debug and monitor request flows through the system
+- Provides timing and dependency information
+
+**Additional Features**
+- Circuit breakers (Hystrix) for fault tolerance
+- Client-side load balancing (Ribbon)
+- API gateway support (Spring Cloud Gateway)
+- Message brokers integration for async communication
 
 **5. Production-Ready**
 

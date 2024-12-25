@@ -1,6 +1,6 @@
-import React from 'react';
-import { Menu } from 'lucide-react';
-import Image from 'next/image';
+import React from "react";
+import { Menu } from "lucide-react";
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -10,11 +10,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 export default function HeaderNav() {
@@ -24,18 +20,18 @@ export default function HeaderNav() {
     {
       title: "Documentation",
       href: "/",
-      description: "Learn how to use Cloudinator effectively"
+      description: "Learn how to use Cloudinator effectively",
     },
     {
       title: "Learning Resources",
       href: "/resource/spring-microservice/introduction",
-      description: "Detailed API documentation and examples"
+      description: "Detailed API documentation and examples",
     },
     {
       title: "Tutorials",
       href: "/tutorial",
-      description: "Step-by-step guides for common tasks"
-    }
+      description: "Step-by-step guides for common tasks",
+    },
   ];
 
   return (
@@ -48,7 +44,9 @@ export default function HeaderNav() {
             width={60}
             height={60}
           />
-          <span className="text-xl font-bold text-gray-800 dark:text-white">Cloudinator</span>
+          <span className="text-xl font-bold text-gray-800 dark:text-white">
+            Cloudinator
+          </span>
         </div>
 
         {/* Desktop Navigation */}
@@ -56,7 +54,9 @@ export default function HeaderNav() {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">Products</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
+                  Products
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-96 gap-3 md:w-[400px] bg-white dark:bg-gray-800 rounded-md shadow-lg hover:text-purple-500">
                     <li className="row-span-3 bg-white dark:bg-gray-700 rounded-lg hover:text-purple-600 dark:hover:text-purple-400">
@@ -70,7 +70,8 @@ export default function HeaderNav() {
                             Cloudinator Platform
                           </div>
                           <p className="text-sm leading-tight text-gray-600 dark:text-gray-300">
-                            IaC Advanced platform for developers to deploy services.
+                            IaC Advanced platform for developers to deploy
+                            services.
                           </p>
                         </a>
                       </NavigationMenuLink>
@@ -79,7 +80,9 @@ export default function HeaderNav() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">Resources</NavigationMenuTrigger>
+                <NavigationMenuTrigger className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
+                  Resources
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid w-96 md:w-[400px] bg-white dark:bg-gray-800 rounded-md shadow-lg">
                     {resources.map((resource) => (
@@ -89,7 +92,9 @@ export default function HeaderNav() {
                             className="block select-none space-y-1 rounded-lg p-6 leading-none no-underline outline-none transition-colors hover:bg-gray-100 dark:hover:bg-purple-900"
                             href={resource.href}
                           >
-                            <div className="text-sm font-medium leading-none text-gray-800 dark:text-white">{resource.title}</div>
+                            <div className="text-sm font-medium leading-none text-gray-800 dark:text-white">
+                              {resource.title}
+                            </div>
                             <p className="text-sm leading-snug text-gray-500 dark:text-gray-400">
                               {resource.description}
                             </p>
@@ -101,7 +106,9 @@ export default function HeaderNav() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuLink className={`${navigationMenuTriggerStyle()} text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400`}>
+                <NavigationMenuLink
+                  className={`${navigationMenuTriggerStyle()} text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400`}
+                >
                   About
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -118,14 +125,26 @@ export default function HeaderNav() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64 bg-white dark:bg-gray-800">
+            <SheetContent
+              side="right"
+              className="w-64 bg-white dark:bg-gray-800"
+            >
               <nav className="flex flex-col space-y-4 p-4">
                 {resources.map((resource) => (
-                  <a key={resource.title} href={resource.href} className="text-lg font-medium text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400">
+                  <a
+                    key={resource.title}
+                    href={resource.href}
+                    className="text-lg font-medium text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400"
+                  >
                     {resource.title}
                   </a>
                 ))}
-                <a href="#" className="text-lg font-medium text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400">Pricing</a>
+                <a
+                  href="#"
+                  className="text-lg font-medium text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400"
+                >
+                  Pricing
+                </a>
               </nav>
             </SheetContent>
           </Sheet>

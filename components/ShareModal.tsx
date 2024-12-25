@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Share, Facebook, Link } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Share, Facebook, Link } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 // Define the props type for ShareModal
 interface ShareModalProps {
@@ -26,21 +26,26 @@ interface ShareModalProps {
  * @param onClose The callback to close the dialog.
  * @param contentTitle The title of the content to be shared. Defaults to "Share This Content".
  */
-/******  a4141689-6785-42a0-ade7-a403887cf12d  *******/const ShareModal: React.FC<ShareModalProps> = ({ 
-  isOpen, 
-  onClose, 
-  contentTitle = 'Share This Content', 
-  shareUrl = "https://cloudinator.istad.co/" // Default to current URL if not provided
+/******  a4141689-6785-42a0-ade7-a403887cf12d  *******/ const ShareModal: React.FC<
+  ShareModalProps
+> = ({
+  isOpen,
+  onClose,
+  contentTitle = "Share This Content",
+  shareUrl = "https://cloudinator.istad.co/", // Default to current URL if not provided
 }) => {
   // Define the platform type
-  type SharePlatform = 'facebook' | 'copy';
+  type SharePlatform = "facebook" | "copy";
 
   const handleShare = async (platform: SharePlatform) => {
     try {
-      if (platform === 'facebook') {
+      if (platform === "facebook") {
         const encodedShareUrl = encodeURIComponent(shareUrl); // Use custom share URL
-        window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`, '_blank');
-      } else if (platform === 'copy') {
+        window.open(
+          `https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`,
+          "_blank",
+        );
+      } else if (platform === "copy") {
         await navigator.clipboard.writeText(shareUrl); // Use custom share URL
         toast({
           title: "Link copied!",
@@ -75,16 +80,16 @@ interface ShareModalProps {
           <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
             <Button
               variant="outline"
-              className="flex items-center gap-2 border-purple-500 bg-purple-500 text-white hover:bg-purple-700 hover:text-white"
-              onClick={() => handleShare('facebook')}
+              className="w-[160px] h-[160px] flex items-center gap-2 border-purple-500 bg-purple-500 text-white hover:bg-purple-700 hover:text-white"
+              onClick={() => handleShare("facebook")}
             >
               <Facebook className="h-4 w-4" />
               Share on Facebook
             </Button>
             <Button
               variant="outline"
-              className="flex items-center gap-2 border border-purple-500 hover:bg-purple-200"
-              onClick={() => handleShare('copy')}
+              className="w-[160px] h-[160px] flex items-center gap-2 border border-purple-500 hover:bg-purple-200"
+              onClick={() => handleShare("copy")}
             >
               <Link className="h-4 w-4" />
               Copy Link
