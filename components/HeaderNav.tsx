@@ -115,40 +115,6 @@ export default function HeaderNav() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-
-        {/* Mobile Navigation */}
-        <div className="flex md:hidden flex-1 justify-end">
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="w-64 bg-white dark:bg-gray-800"
-            >
-              <nav className="flex flex-col space-y-4 p-4">
-                {resources.map((resource) => (
-                  <a
-                    key={resource.title}
-                    href={resource.href}
-                    className="text-lg font-medium text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400"
-                  >
-                    {resource.title}
-                  </a>
-                ))}
-                <a
-                  href="#"
-                  className="text-lg font-medium text-gray-800 dark:text-white hover:text-purple-500 dark:hover:text-purple-400"
-                >
-                  Pricing
-                </a>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
       </div>
     </header>
   );

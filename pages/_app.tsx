@@ -5,7 +5,7 @@ import { GlobalLoader, LoadingProvider } from "@/components/Loading";
 import MaintenanceBanner from "@/components/MaintenanceBanner";
 import { Poppins } from "next/font/google";
 import SnowfallToggleButton from "@/components/SnowfallToggleButton";
-import FooterBanner from "@/components/FooterBanner";
+import FooterBanner2 from "@/components/FooterBanner2";
 import { Toaster } from "@/components/ui/toaster";
 import HeaderNav from "@/components/HeaderNav";
 
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <HeaderNav />
           <Component {...pageProps} />
           <SnowfallToggleButton />
-          <FooterBanner />
+          <FooterBanner2 />
           <Toaster />
           <GlobalLoader />
         </LoadingProvider>

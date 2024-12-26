@@ -101,17 +101,51 @@ Spring Boot is designed with microservices architecture in mind. It integrates s
 - API gateway support (Spring Cloud Gateway)
 - Message brokers integration for async communication
 
-**5. Production-Ready**
+##### <span className="text-gray-500 font-semibold">Production Ready</span>
 
 Spring Boot offers a range of production-ready features, including monitoring, health checks, metrics, and logging, through the Spring Boot Actuator module.
 
-**6. Dependency Management**
+**Health Checks**
+- **/health** endpoint shows application health status
+- Custom health indications for databases, services and dependencies
+- Aggregates status of all system components
 
-By leveraging the Spring Boot Starter dependencies, developers can quickly include commonly used libraries and frameworks with minimal effort. For example:
+**Metrics**
+- **/metrics** endpoint exposes key performance data
+- JVM stas, memory usage, thread configurations
+- Custom metrics for business-specific monitoring
+- Integrates with monitoring systems like Prometheus
 
-    - <code>spring-boot-starter-web</code> for web applications.
-    - <code>spring-boot-starter-data-jpa</code> for database integration.
+**Loggging**
+- Configurable log levels via **/loggers** endpoint
+- Runtime log adjustment without restart
+- Structured logging support
 
+**Additional Features**
+- **/info** for application info and build details
+- Environment configuration viewing
+- Thread dump analysis
+- HTTP trace monitoring
+- Custom endpoints for specific monitoring needs
+
+##### <span className="text-gray-500 font-semibold">Dependency Management</span>
+
+Spring Boot's dependency management is a powerful feature that simplifies library configuration through Starter dependencies.
+
+**Spring Boot Starters**
+
+- Pre-configured dependencies for common libraries and frameworks
+- Automatically included when using specific Spring Boot features
+- Eliminate version conflicts and compatibility issues
+
+**Benefits**
+
+- Reduces boilerplate configuration
+- Ensures tested and compatible dependency versions
+- Simplifies build file Maintenance
+- Provide consistent dependency management across projects
+
+##### <span className="text-gray-500 font-semibold">Dependency Management</span>
 **7. DevTools for Faster Development**
 
 Spring Boot's DevTools module enhances the developer experience by enabling features like automatic reloads, live reload, and caching optimizations during development.
