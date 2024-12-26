@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Snowflake, X, Leaf } from "lucide-react";
+import { Snowflake, X, Leaf, Cloud } from "lucide-react";
 import ReactSnowfall from "react-snowfall";
 
 interface BaseTheme {
   name: string;
-  type: "snow" | "leaf";
+  type: "snow" | "leaf" | "water";
   speed: [number, number];
   wind: [number, number];
 }
@@ -22,7 +22,14 @@ interface LeafTheme extends BaseTheme {
   count: number;
 }
 
-type Theme = SnowTheme | LeafTheme;
+interface WaterTheme extends BaseTheme {
+  type: "water";
+  color: string;
+  count: number;
+  dropSize: [number, number];
+}
+
+type Theme = SnowTheme | LeafTheme | WaterTheme;
 
 interface ThemeToggleProps {
   themes?: Theme[];
@@ -104,6 +111,87 @@ const LeafFall: React.FC<LeafTheme> = ({ color, count, speed, wind }) => {
   );
 };
 
+interface WaterTheme {
+  color: string;
+  count: number;
+  speed: [number, number];
+  dropSize: [number, number];
+}
+
+const WaterDrop: React.FC<WaterTheme> = ({ color, count, speed, dropSize }) => {
+  const [drops, setDrops] = useState<
+    Array<{
+      id: number;
+      x: number;
+      y: number;
+      size: number;
+      speedY: number;
+      opacity: number;
+    }>
+  >([]);
+
+  useEffect(() => {
+    const createDrops = () => {
+      const newDrops = Array.from({ length: count }, (_, i) => ({
+        id: i,
+        x: Math.random() * 100,
+        y: Math.random() * -10 - 10, // Start above the screen
+        size: Math.random() * (dropSize[1] - dropSize[0]) + dropSize[0],
+        speedY: Math.random() * (speed[1] - speed[0]) + speed[0],
+        opacity: Math.random() * (0.8 - 0.4) + 0.4,
+      }));
+      setDrops(newDrops);
+    };
+
+    createDrops();
+    const interval = setInterval(() => {
+      setDrops((prev) =>
+        prev.map((drop) => ({
+          ...drop,
+          y: drop.y + drop.speedY,
+          ...(drop.y > 100 && {
+            y: Math.random() * -10 - 10, // Reset to above the screen
+            x: Math.random() * 100,
+          }),
+        })),
+      );
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [count, speed, dropSize]);
+
+  return (
+    <div
+      style={{
+        position: "fixed",
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+        pointerEvents: "none",
+      }}
+    >
+      {drops.map((drop) => (
+        <div
+          key={drop.id}
+          style={{
+            position: "absolute",
+            left: `${drop.x}%`,
+            top: `${drop.y}%`,
+            width: `${drop.size * 2}px`,
+            height: `${drop.size * 4}px`,
+            background: `linear-gradient(to bottom, ${color}00, ${color})`,
+            borderRadius: "50% 50% 50% 50% / 60% 60% 40% 40%",
+            transform: "translate(-50%, -50%)",
+            opacity: drop.opacity,
+            transition: "top 0.2s linear",
+            willChange: "top",
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
 const defaultThemes: Theme[] = [
   {
     name: "Snow Falling",
@@ -120,6 +208,15 @@ const defaultThemes: Theme[] = [
     count: 15,
     speed: [1, 2],
     wind: [-0.5, 0.5],
+  },
+  {
+    name: "Rain Drops",
+    type: "water",
+    color: "#60a5fa",
+    count: 50,
+    speed: [2, 4],
+    wind: [-0.2, 0.2],
+    dropSize: [2, 4],
   },
 ];
 
@@ -170,6 +267,8 @@ const ThemeToggleButton: React.FC<ThemeToggleProps> = ({
           >
             {selectedTheme?.type === "leaf" ? (
               <Leaf className="w-6 h-6" />
+            ) : selectedTheme?.type === "water" ? (
+              <Cloud className="w-6 h-6" />
             ) : (
               <Snowflake className="w-6 h-6" />
             )}
@@ -234,15 +333,10 @@ const ThemeToggleButton: React.FC<ThemeToggleProps> = ({
               speed={selectedTheme.speed}
               wind={selectedTheme.wind}
             />
+          ) : selectedTheme.type === "water" ? (
+            <WaterDrop {...selectedTheme} />
           ) : (
-            <LeafFall
-              color={selectedTheme.color}
-              count={selectedTheme.count}
-              speed={selectedTheme.speed}
-              wind={selectedTheme.wind}
-              type={"leaf"}
-              name={""}
-            />
+            <LeafFall {...selectedTheme} />
           )}
         </div>
       )}
