@@ -5,6 +5,8 @@ import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { Card } from '@/components/ui/card'
 import { ChevronDown } from 'lucide-react'
 
+import Image from 'next/image'
+
 interface TeamMember {
   id: number
   name: string
@@ -144,7 +146,7 @@ export default function AboutPage() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="relative lg:ml-[30%] p-6 hover:shadow-lg transition-shadow duration-300">
+              <Card className="relative lg:ml-[30%] p-6 hover:shadow-lg transition-shadow duration-300 mr-10  ">
                 {/* Connection to progress line (desktop only) */}
                 <motion.div 
                   className="hidden lg:block absolute left-0 top-1/2 w-[calc(20%-2rem)] h-[3px] bg-primary/50 -translate-x-full"
@@ -155,18 +157,24 @@ export default function AboutPage() {
                 />
                 
                 {/* Member Avatar */}
-                <div className="absolute left-0 lg:-left-24 top-1/2 -translate-y-1/2 w-40 h-40 rounded-full border-8 border-purple-500 overflow-hidden transform -translate-x-1/2 bg-muted">
-                  <motion.img
-                    src={member.imageUrl}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
+                <div className=" absolute left-0 lg:-left-24 top-1/2 -translate-y-1/2  rounded-full border-8 border-purple-500 overflow-hidden transform -translate-x-1/2 bg-muted">
+                  <motion.div 
+                    className= "w-40 h-40 bg-muted rounded-full rounded-full object-cover  "
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
-                  />
+                  >
+                      <Image
+                      src={member.imageUrl}
+                      alt={member.name}
+                      width={2000}
+                      height={2000}
+                      className="w-full h-full object-cover "
+                    />
+                  </motion.div> 
                 </div>
 
                 {/* Member Info */}
-                <div className="ml-12 lg:ml-8">
+                <div className="ml-20 lgml-8">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
