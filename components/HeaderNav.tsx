@@ -107,9 +107,12 @@ export default function HeaderNav() {
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <NavigationMenuLink
+                  asChild
                   className={`${navigationMenuTriggerStyle()} text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400`}
                 >
-                  About
+                  <a href="/about">
+                    About
+                  </a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -119,3 +122,4 @@ export default function HeaderNav() {
     </header>
   );
 }
+
