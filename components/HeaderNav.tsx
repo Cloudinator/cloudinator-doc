@@ -63,7 +63,7 @@ export default function HeaderNav() {
                       <NavigationMenuLink asChild>
                         <a
                           className="flex h-full w-full select-none flex-col justify-end rounded-lg p-6 no-underline outline-none focus:shadow-md transition-colors hover:bg-gray-100 dark:hover:bg-purple-900"
-                          href="https://cloudinator-ui.cloudinator.cloud/"
+                          href="https://cloudinator.istad.co"
                           target="_blank"
                         >
                           <div className="mb-2 mt-4 text-lg font-medium text-gray-800 dark:text-white">
