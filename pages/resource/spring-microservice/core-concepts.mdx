@@ -1,5 +1,36 @@
+---
+title: "Core Concepts"
+description: "Spring Microservice is a specialized implementation approach using the Spring Boot framework for building distributed, lightweight services that work together as part of a larger application. It embraces the microservices architectural style where applications are structured as collections of loosely coupled services, each running in its own process and communicating through APIs. Spring Microservice provides built-in support for service discovery, configuration management, load balancing, and fault tolerance patterns essential for microservices. It enables developers to build resilient, scalable distributed systems while leveraging Spring Boot's simplicity and robust ecosystem."
+---
+
+import Head from 'next/head';
+
+<Head>
+
+  <meta name="description" content="Cloudinator is a powerful DevOps platform streamlining software development, deployment, and infrastructure management." />
+  <meta property="og:title" content="Core Concepts Spring Microservice - Cloudinator" />
+  <meta property="og:description" content="Cloudinator is a powerful DevOps platform streamlining software development, deployment, and infrastructure management." />
+  <meta property="og:image" content="/programming/spring.png" />
+  <meta property="og:image:alt" content="Cloudinator: The Ultimate DevOps Platform" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://docs.cloudinator.cloud/deployment/frontend/html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Core Concepts Spring Microservice - Cloudinator" />
+  <meta name="twitter:description" content="Cloudinator is a powerful DevOps platform streamlining software development, deployment, and infrastructure management." />
+  <meta name="twitter:image" content="/programming/spring.png" />
+  <meta name="twitter:image:alt" content="Cloudinator: The Ultimate DevOps Platform" />
+</Head>
+
 ## <span className="text-purple-700 font-bold">Core Concepts</span>
 
-import InteractiveComingSoon from '@/components/InteractiveComingSoon';
-
-<InteractiveComingSoon />
+Spring Microservices are built on key concepts:
+1. **Service Discovery**: Services register themselves with a discovery server (like Eureka). Other services locate them dynamically rather than using hardcoded URLs.
+2. **API Gateway**: Single entry point that routes requests to appropriate microservices, handles authentication, and load balancing. Spring Cloud Gateway is commonly used.
+3. **Load Balancing**: Distributes traffic across service instances using client-side (Ribbon) or server-side balancing.
+4. **Circuit Breaker**: Prevents cascade failures by monitoring service health and providing fallbacks (using Resilience4j or Hystrix).
+5. **Configuration Management**: Externalized configuration using Spring Cloud Config Server for centralized management across services.
+6. **Service Communication**:
+   - **Synchronous**: REST/HTTP using RestTemplate or WebClient
+   - **Asynchronous**: Message queues like RabbitMQ/Kafka
+7. **Distributed Tracing**: Tracks requests across services using tools like Spring Cloud Sleuth and Zipkin.
