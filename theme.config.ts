@@ -8,20 +8,10 @@ const themeConfig = {
   footer: false,
   sidebar: {
     defaultMenuCollapsed: false,
-    toggleButton: true,
     styles: {
-      item: "hover:bg-[#f0f0f0] hover:text-[#1a73e8]",
+      item: "hover:bg-purple-400 hover:text-purple-600",
       activeItem: "bg-[#1a73e8] text-white",
     },
-  },
-  primaryHue: {
-    light: 200,
-    dark: 220,
-  },
-  nextThemes: {
-    defaultTheme: "light",
-    storageKey: "theme",
-    themes: ["light", "dark"],
   },
   navbar: {
     links: [
@@ -30,8 +20,7 @@ const themeConfig = {
       { name: "About", href: "/about" }, // Added About section
     ],
   },
+  themeSwitch: false,
 };
 
 export default themeConfig;
-
-

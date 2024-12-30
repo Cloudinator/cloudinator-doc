@@ -9,6 +9,7 @@ import FooterBanner2 from "@/components/FooterBanner2";
 import { Toaster } from "@/components/ui/toaster";
 import HeaderNav from "@/components/HeaderNav";
 import NewYearCountdownBanner from "@/components/NewYearCountdownBanner";
+import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -19,19 +20,26 @@ const poppins = Poppins({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <main className={poppins.className}>
-        <LoadingProvider>
-          {/* <MaintenanceBanner /> */}
-          <NewYearCountdownBanner />
-          <ScrollProgressBar />
-          <HeaderNav />
-          <Component {...pageProps} />
-          <SnowfallToggleButton />
-          <FooterBanner2 />
-          <Toaster />
-          <GlobalLoader />
-        </LoadingProvider>
-      </main>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <main className={poppins.className}>
+          <LoadingProvider>
+            {/* <MaintenanceBanner /> */}
+            <NewYearCountdownBanner />
+            <ScrollProgressBar />
+            <HeaderNav />
+            <Component {...pageProps} />
+            <SnowfallToggleButton />
+            <FooterBanner2 />
+            <Toaster />
+            <GlobalLoader />
+          </LoadingProvider>
+        </main>
+      </ThemeProvider>
     </>
   );
 }
