@@ -8,6 +8,7 @@ import AnimatedHeroText from "./AnimatedHeroText"
 import { Cloud, Container, GitBranch, Terminal } from 'lucide-react'
 import { FeatureCard } from "../FeatureCard"
 import { CodePreview } from "../CodePreview"
+import AnimatedBackground from "./AnimatedBackground"
 
 interface DocHeroProps {
   title: string
@@ -44,35 +45,10 @@ const DocHero: React.FC<DocHeroProps> = ({
     },
   }
 
-  const floatingAnimation = {
-    y: ["-10%", "10%"],
-    transition: {
-      y: {
-        duration: 2,
-        repeat: Infinity,
-        repeatType: "reverse",
-        ease: "easeInOut",
-      },
-    },
-  }
-
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-primary/20 to-background dark:from-primary/10 dark:to-background">
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10 dark:opacity-5" />
-        <motion.div
-          className="absolute inset-0 bg-gradient-radial from-primary/20 to-transparent dark:from-primary/10"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      </div>
+    <div className="relative overflow-hidden">
+      <AnimatedBackground />
+      
       <motion.div
         className="relative mx-auto max-w-7xl px-4 pt-16 pb-20 sm:px-6 sm:pt-24 sm:pb-32 lg:px-8"
         initial="hidden"
@@ -170,4 +146,3 @@ const DocHero: React.FC<DocHeroProps> = ({
 }
 
 export default DocHero
-

@@ -9,8 +9,6 @@ export default {
         float: false,
       },
       pagination: true,
-      editLink: true,
-      // typesetting: 'article'
     },
     themeConfig: {
       toc: {
