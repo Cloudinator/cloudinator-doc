@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Clock } from "lucide-react";
@@ -11,28 +13,36 @@ interface TimeLeft {
 }
 
 export default function NewYearCountdownBanner() {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft | {}>({});
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [isCountdownOver, setIsCountdownOver] = useState(false);
+  const [isHydrated, setIsHydrated] = useState(false); // To ensure hydration
 
   useEffect(() => {
+    setIsHydrated(true); // Set hydration flag
+  }, []);
+
+  useEffect(() => {
+    if (!isHydrated) return; // Ensure client-only logic runs after hydration
+
     const timer = setInterval(() => {
       const newTimeLeft = calculateTimeLeft();
       setTimeLeft(newTimeLeft);
-      if ((newTimeLeft as TimeLeft).total <= 0) {
+      if (newTimeLeft && newTimeLeft.total <= 0) {
         clearInterval(timer);
         setIsCountdownOver(true);
       }
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [isHydrated]);
 
-  function calculateTimeLeft(): TimeLeft | {} {
-    const difference = +new Date("2025-01-01") - +new Date();
-    let timeLeft = {};
+  function calculateTimeLeft(): TimeLeft | null {
+    const targetDate = new Date("2025-01-01T00:00:00");
+    const now = new Date();
+    const difference = targetDate.getTime() - now.getTime();
 
     if (difference > 0) {
-      timeLeft = {
+      return {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / 1000 / 60) % 60),
@@ -41,7 +51,7 @@ export default function NewYearCountdownBanner() {
       };
     }
 
-    return timeLeft;
+    return null;
   }
 
   const fireworkVariants = {
@@ -52,6 +62,8 @@ export default function NewYearCountdownBanner() {
       transition: { duration: 0.5 },
     },
   };
+
+  if (!isHydrated || timeLeft === null) return null; // Prevent hydration mismatch
 
   return (
     <motion.div
@@ -70,10 +82,8 @@ export default function NewYearCountdownBanner() {
                 "Happy New Year 2025! 🎉"
               ) : (
                 <>
-                  Countdown to 2025: {(timeLeft as TimeLeft).days}d{" "}
-                  {(timeLeft as TimeLeft).hours}h{" "}
-                  {(timeLeft as TimeLeft).minutes}m{" "}
-                  {(timeLeft as TimeLeft).seconds}s
+                  Countdown to 2025: {timeLeft.days}d {timeLeft.hours}h{" "}
+                  {timeLeft.minutes}m {timeLeft.seconds}s
                 </>
               )}
             </p>

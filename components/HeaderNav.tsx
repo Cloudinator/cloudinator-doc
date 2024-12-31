@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Menu } from "lucide-react";
 import Image from "next/image";
@@ -12,6 +14,7 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { ModeToggle } from "./ModeToggle";
 
 export default function HeaderNav() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -110,16 +113,16 @@ export default function HeaderNav() {
                   asChild
                   className={`${navigationMenuTriggerStyle()} text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400`}
                 >
-                  <a href="/about">
-                    About
-                  </a>
+                  <a href="/about">About</a>
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>
+        <div className="flex items-center">
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );
 }
-
