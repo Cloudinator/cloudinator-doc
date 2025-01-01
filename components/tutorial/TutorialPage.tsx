@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -57,6 +57,7 @@ interface Course {
   progress: number;
   thumbnail: string;
   videoUrl: string;
+  lastViewed?: number;
 }
 
 interface Category {
@@ -69,7 +70,44 @@ const TutorialPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
   const [currentVideoUrl, setCurrentVideoUrl] = useState("");
+  const [recentlyViewed, setRecentlyViewed] = useState<Course[]>([]);
   const { toast } = useToast();
+
+  useEffect(() => {
+    const storedRecent = localStorage.getItem("recentlyViewed");
+    if (storedRecent) {
+      setRecentlyViewed(JSON.parse(storedRecent));
+    }
+  }, []);
+
+  const addToRecentlyViewed = (course: Course) => {
+    const now = new Date().getTime();
+    const courseWithProgress = {
+      ...course,
+      progress: 100,
+      lastViewed: now,
+    };
+
+    const updatedRecent = [
+      courseWithProgress,
+      ...recentlyViewed.filter((c) => c.id !== course.id),
+    ].slice(0, 5);
+
+    setRecentlyViewed(updatedRecent);
+    localStorage.setItem("recentlyViewed", JSON.stringify(updatedRecent));
+  };
+
+  const formatLastViewed = (timestamp: number) => {
+    const seconds = Math.floor((new Date().getTime() - timestamp) / 1000);
+
+    if (seconds < 60) return `${seconds} seconds ago`;
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes} minutes ago`;
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hours ago`;
+    const days = Math.floor(hours / 24);
+    return `${days} days ago`;
+  };
 
   // Sample course data
   const courses: Course[] = [
@@ -97,10 +135,10 @@ const TutorialPage = () => {
       level: "advanced",
       instructor: "Mike Chen",
       rating: 4.9,
-      progress: 0,
+      progress: 45,
       thumbnail:
         "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video URL
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
     {
       id: 3,
@@ -112,12 +150,11 @@ const TutorialPage = () => {
       level: "intermediate",
       instructor: "Alex Kumar",
       rating: 4.7,
-      progress: 0,
+      progress: 45,
       thumbnail:
         "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", // Replace with actual video URL
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
-    // Add more courses as needed
   ];
 
   const categories: Category[] = [
@@ -192,67 +229,72 @@ const TutorialPage = () => {
           <TabsContent key={category.id} value={category.id} className="mt-6">
             {filteredCourses.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredCourses.map((course) => (
-                  <Card key={course.id} className="flex flex-col">
-                    <CardHeader className="p-0">
-                      <div className="relative">
-                        <img
-                          src={course.thumbnail}
-                          alt={course.title}
-                          className="w-full h-48 object-cover rounded-t-xl"
-                        />
-                        {course.progress > 0 && (
-                          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 px-4 grid place-content-center">
-                            <Progress value={course.progress} className="h-1" />
-                            <p className="text-white text-xs mt-1">
-                              New Video!
-                            </p>
+                {filteredCourses.map((course) => {
+                  const viewed = recentlyViewed.find((v) => v.id === course.id);
+                  const isViewed = !!viewed;
+                  return (
+                    <Card key={course.id} className="flex flex-col">
+                      <CardHeader className="p-0">
+                        <div className="relative">
+                          <img
+                            src={course.thumbnail}
+                            alt={course.title}
+                            className="w-full h-48 object-cover rounded-t-xl"
+                          />
+                          {isViewed && (
+                            <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 px-4 grid place-content-center">
+                              <Progress value={100} className="h-1" />
+                              <p className="text-white text-xs mt-1">
+                                Viewed{" "}
+                                {viewed?.lastViewed &&
+                                  formatLastViewed(viewed.lastViewed)}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      </CardHeader>
+                      <CardContent className="flex-1 p-4">
+                        <div className="flex items-center justify-between mb-2">
+                          <Badge className={getLevelBadgeColor(course.level)}>
+                            {course.level}
+                          </Badge>
+                          <div className="flex items-center">
+                            <Star className="w-4 h-4 text-yellow-400 mr-1" />
+                            <span className="text-sm">{course.rating}</span>
                           </div>
-                        )}
-                      </div>
-                    </CardHeader>
-                    <CardContent className="flex-1 p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <Badge className={getLevelBadgeColor(course.level)}>
-                          {course.level}
-                        </Badge>
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                          <span className="text-sm">{course.rating}</span>
                         </div>
-                      </div>
-                      <CardTitle className="text-xl mb-2">
-                        {course.title}
-                      </CardTitle>
-                      <CardDescription className="mb-4">
-                        {course.description}
-                      </CardDescription>
-                      <div className="flex items-center gap-4 text-sm text-gray-500">
-                        <div className="flex items-center">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {course.duration}
+                        <CardTitle className="text-xl mb-2">
+                          {course.title}
+                        </CardTitle>
+                        <CardDescription className="mb-4">
+                          {course.description}
+                        </CardDescription>
+                        <div className="flex items-center gap-4 text-sm text-gray-500">
+                          <div className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {course.duration}
+                          </div>
                         </div>
-                      </div>
-                    </CardContent>
-                    <CardFooter className="p-4 pt-0 flex justify-between">
-                      <Button
-                        className="flex-1 mr-2"
-                        onClick={() => {
-                          toast({
-                            title: "Coming Soon!",
-                            description:
-                              "This video content will be available soon.",
-                          });
-                          // setCurrentVideoUrl(course.videoUrl);
-                          // setIsVideoModalOpen(true);
-                        }}
-                      >
-                        <Play className="w-4 h-4 mr-2" />
-                        Watch Now
-                      </Button>
-                    </CardFooter>
-                  </Card>
-                ))}
+                      </CardContent>
+                      <CardFooter className="p-4 pt-0 flex justify-between">
+                        <Button
+                          className="flex-1 mr-2"
+                          onClick={() => {
+                            addToRecentlyViewed(course);
+                            toast({
+                              title: "Coming Soon!",
+                              description:
+                                "This video content will be available soon.",
+                            });
+                          }}
+                        >
+                          <Play className="w-4 h-4 mr-2" />
+                          Watch Now
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  );
+                })}
               </div>
             ) : (
               <EmptyState
@@ -262,6 +304,46 @@ const TutorialPage = () => {
           </TabsContent>
         ))}
       </Tabs>
+
+      {/* Recently Viewed Section */}
+      {recentlyViewed.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-4">Recently Viewed</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recentlyViewed.map((course) => (
+              <Card key={course.id} className="flex flex-col">
+                <CardHeader className="p-0">
+                  <div className="relative">
+                    <img
+                      src={course.thumbnail}
+                      alt={course.title}
+                      className="w-full h-48 object-cover rounded-t-xl"
+                    />
+                    <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 px-4 grid place-content-center">
+                      <Progress value={100} className="h-1" />
+                      <p className="text-white text-xs mt-1">
+                        Viewed{" "}
+                        {course.lastViewed &&
+                          formatLastViewed(course.lastViewed)}
+                      </p>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-1 p-4">
+                  <CardTitle className="text-xl mb-2">{course.title}</CardTitle>
+                  <div className="flex items-center gap-4 text-sm text-gray-500">
+                    <div className="flex items-center">
+                      <Clock className="w-4 h-4 mr-1" />
+                      {course.duration}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
+
       <VideoModal
         isOpen={isVideoModalOpen}
         onClose={() => setIsVideoModalOpen(false)}
