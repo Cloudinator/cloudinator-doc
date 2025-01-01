@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { Menu } from "lucide-react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   NavigationMenu,
@@ -12,12 +11,14 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "./ModeToggle";
 
 export default function HeaderNav() {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const resources = [
     {
@@ -36,6 +37,10 @@ export default function HeaderNav() {
       description: "Step-by-step guides for common tasks",
     },
   ];
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-900">

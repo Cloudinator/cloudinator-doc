@@ -2,14 +2,13 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import ScrollProgressBar from "@/components/ScrollProgressBar";
 import { GlobalLoader, LoadingProvider } from "@/components/Loading";
-// import MaintenanceBanner from "@/components/MaintenanceBanner";
+import MaintenanceBanner from "@/components/MaintenanceBanner";
 import { Poppins } from "next/font/google";
 import SnowfallToggleButton from "@/components/SnowfallToggleButton";
 import FooterBanner2 from "@/components/FooterBanner2";
+import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
 import HeaderNav from "@/components/HeaderNav";
-import NewYearCountdownBanner from "@/components/NewYearCountdownBanner";
-import { ThemeProvider } from "next-themes";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -28,8 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <main className={poppins.className}>
           <LoadingProvider>
-            {/* <MaintenanceBanner /> */}
-            <NewYearCountdownBanner />
+            <MaintenanceBanner />
             <ScrollProgressBar />
             <HeaderNav />
             <Component {...pageProps} />
