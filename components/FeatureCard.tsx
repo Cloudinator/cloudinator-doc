@@ -41,7 +41,7 @@ export function FeatureCard({ icon: Icon, title, description }: FeatureCardProps
         }
       }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="group flex flex-col items-center rounded-lg border bg-card p-6 shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground bg-white hover:bg-gray-100 hover:cursor-pointer"
+      className="group flex flex-col items-center rounded-lg border dark:text-white bg-card p-6 shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground bg-white dark:bg-gray-500 hover:bg-gray-100 dark:border-none hover:cursor-pointer"
     >
       <motion.div 
         className="rounded-full bg-primary/10 p-4"
