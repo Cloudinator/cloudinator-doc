@@ -20,7 +20,7 @@ export default {
       },
     },
   },
-  "tutorial": {
+  tutorial: {
     title: "Tutorial",
     theme: {
       breadcrumb: true,
@@ -90,5 +90,14 @@ export default {
       pagination: true,
     },
   },
-
+  community: {
+    title: "Community",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
 };
