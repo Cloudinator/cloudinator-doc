@@ -100,4 +100,14 @@ export default {
       pagination: true,
     },
   },
+  blog: {
+    title: "Blog",
+    theme: {
+      breadcrumb: true,
+      footer: true,
+      sidebar: true,
+      toc: true,
+      pagination: true,
+    },
+  },
 };

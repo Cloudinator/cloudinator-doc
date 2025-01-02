@@ -12,9 +12,9 @@ export function FrameworkCard({ name, icon, href }: FrameworkCardProps) {
     return (
         <Link
             href={href}
-            className="flex flex-col items-center justify-center p-6 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-purple-100 transition-colors"
+            className="flex flex-col items-center justify-center p-6 rounded-lg border border-gray-200 hover:border-gray-100 hover:bg-gray-100 hover:text-black transition-colors"
         >
-            <div className="w-12 h-12 mb-4">
+            <div className="w-12 h-12 mb-4 ">
                 <Image
                     src={icon}
                     alt=""

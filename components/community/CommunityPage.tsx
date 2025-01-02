@@ -98,36 +98,36 @@ const CommunityPage = () => {
           thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
           videoUrl: "https://www.youtube.com/embed/kSbjiVKUb8c",
         },
-        // {
-        //   id: 2,
-        //   title: "How to deploy React website",
-        //   description:
-        //     "Learn the basics of deployment with cloudinator of React.js",
-        //   duration: "3 mins",
-        //   category: "devops",
-        //   level: "advanced",
-        //   instructor: "Mike Chen",
-        //   rating: 4.9,
-        //   progress: 45,
-        //   thumbnail:
-        //     "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-        //   videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        // },
-        // {
-        //   id: 3,
-        //   title: "How to deploy Spring Microservice",
-        //   description:
-        //     "Learn the basics of deployment with cloudinator of Spring Microservice",
-        //   duration: "4 mins",
-        //   category: "cybersecurity",
-        //   level: "intermediate",
-        //   instructor: "Alex Kumar",
-        //   rating: 4.7,
-        //   progress: 45,
-        //   thumbnail:
-        //     "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-        //   videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-        // },
+        {
+          id: 2,
+          title: "Installation Pop OS in VirtualBox",
+          description:
+            "How to install Pop OS in VirtualBox and how to resize to full screen",
+          duration: "12 mins",
+          category: "devops",
+          level: "beginner",
+          instructor: "Pov Sokny",
+          rating: 4.8,
+          progress: 45,
+          thumbnail:
+            "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/embed/1uU0Rgw2Gv8",
+        },
+        {
+          id: 3,
+          title: "What is Cybersecurity?",
+          description:
+            "Learn the overview what is cybersecurity",
+          duration: "25 mins",
+          category: "cybersecurity",
+          level: "beginner",
+          instructor: "Ing Davann",
+          rating: 4.6,
+          progress: 45,
+          thumbnail:
+            "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+          videoUrl: "https://www.youtube.com/embed/sYj8rYska6k",
+        },
       ];
       setCourses(coursesData);
     };
