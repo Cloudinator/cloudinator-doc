@@ -137,17 +137,9 @@ export default function NestjsJSDeployGuide() {
             <h1 className="text-purple-700 text-4xl font-bold mb-8 text-center">
                 How to Deploy Nest.js on Cloudinator
             </h1>
-            <div className="max-w-3xl mx-auto mb-8">
-                <TimerLaunch launchDate={launchDate} onDateUpdate={handleDateUpdate} />
-            </div>
+            
             {isFeatureLaunched ? (
                 <>
-                    <div className="max-w-3xl mx-auto mb-8">
-                        <div className="p-4 bg-green-100 border border-green-300 rounded-lg text-center">
-                            <p className="text-green-700 text-xl font-semibold">New Feature Launched!</p>
-                            <p className="text-green-600">Check out our latest updates and improvements.</p>
-                        </div>
-                    </div>
                     <div className="max-w-3xl mx-auto space-y-12">
                         {steps.map((step, index) => (
                             <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">

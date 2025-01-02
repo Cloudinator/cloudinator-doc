@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Github, Copy, Check, ExternalLink } from 'lucide-react'
 import { GitHubLinkProps, RepoItem } from '@/types/github'
 import { RepoTree } from './RepoTree'
+import { useToast } from '@/hooks/use-toast'
 
 const staticRepoStructure: RepoItem[] = [
   {
@@ -21,16 +22,28 @@ const staticRepoStructure: RepoItem[] = [
 
 export default function StaticGitHubLink({ repoUrl, repoName }: GitHubLinkProps) {
   const [copied, setCopied] = useState(false)
+  const { toast } = useToast();
 
   const copyToClipboard = async () => {
     try {
-      await navigator.clipboard.writeText(repoUrl)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
+      await navigator.clipboard.writeText(repoUrl);
+      setCopied(true);
+      toast({
+        title: "Success",
+        description: "Copied to clipboard",
+        variant: "success",
+        duration: 2000,
+      });
     } catch (err) {
-      console.error('Failed to copy:', err)
+      console.error("Failed to copy:", err);
+      toast({
+        title: "Error",
+        description: "Failed to copy",
+        variant: "error", 
+        duration: 2000,
+      }); 
     }
-  }
+  };
 
   const redirectToGitHub = () => {
     window.open(repoUrl, '_blank', 'noopener,noreferrer')
