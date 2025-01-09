@@ -49,7 +49,7 @@ export default function ReactjsDeployGuide() {
       ),
       image: (
         <Image
-          src="/html-guide/create-project.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/Screenshot%202025-01-09%20083449-18vtVytC62tR1b9LAnHaw2qq0VWJWo.jpg"
           alt="Create a new React Website"
           height={1000}
           width={1000}
@@ -61,7 +61,7 @@ export default function ReactjsDeployGuide() {
       description: "Choose the Git repository that contains your React.js files. You have the option to choose GitHub or GitLab",
       image: (
         <Image
-          src="/html-guide/git-provider.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/git-provider-vn1DaZme5cpdVcBFygLlmcZSSIUTce.jpg"
           alt="Choose Git Provider"
           height={1000}
           width={1000}
@@ -103,7 +103,7 @@ export default function ReactjsDeployGuide() {
       ),
       image: (
         <Image
-          src="/html-guide/configure.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/configure-project-7weorJYCLwLj5qghw4bt5LHMte3yaM.jpg"
           alt="Configure deployment settings"
           height={1000}
           width={1000}

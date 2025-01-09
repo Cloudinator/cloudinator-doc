@@ -49,7 +49,7 @@ export default function NextjsDeployGuide() {
       ),
       image: (
         <Image
-          src="/html-guide/create-project.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/Screenshot%202025-01-09%20083449-18vtVytC62tR1b9LAnHaw2qq0VWJWo.jpg"
           alt="Create a new HTML Static Site"
           height={1000}
           width={1000}
@@ -61,7 +61,7 @@ export default function NextjsDeployGuide() {
       description: "Choose the Git repository that contains your Next.js files. You have the option to choose GitHub or GitLab",
       image: (
         <Image
-          src="/html-guide/git-provider.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/git-provider-vn1DaZme5cpdVcBFygLlmcZSSIUTce.jpg"
           alt="Choose Git Provider"
           height={1000}
           width={1000}
@@ -103,7 +103,7 @@ export default function NextjsDeployGuide() {
       ),
       image: (
         <Image
-          src="/html-guide/configure.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/configure-project-7weorJYCLwLj5qghw4bt5LHMte3yaM.jpg"
           alt="Configure deployment settings"
           height={1000}
           width={1000}
@@ -115,7 +115,7 @@ export default function NextjsDeployGuide() {
       description: "Click 'Create Frontend Project' to start the deployment process. Cloudinator will automatically build and deploy your site.",
       image: (
         <Image
-          src="/placeholder.svg"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/next-deploy-6Y5XN733ZC5ot2RiNuXd993X66nD2Z.jpg"
           alt="Deploy your site"
           height={200}
           width={350}
@@ -127,7 +127,7 @@ export default function NextjsDeployGuide() {
       description: "Once deployment is complete, Cloudinator will provide you with a URL to access your live site.",
       image: (
         <Image
-          src="/placeholder.svg"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/next-success-E1NaJIdS08g2WzTet8Q6JdYxRC35Rd.jpg"
           alt="Access your deployed HTML site"
           height={200}
           width={350}
@@ -156,7 +156,7 @@ export default function NextjsDeployGuide() {
       </div>
       <div className="mt-12 text-center">
         <Link
-          href="https://cloudinator-ui.cloudinator.cloud/"
+          href="https://cloudinator.istad.co"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-purple-600 dark:bg-purple-300 text-white dark:text-purple-800 px-6 py-3 rounded-md text-lg font-semibold hover:bg-purple-700 dark:hover:bg-purple-400 transition-colors"

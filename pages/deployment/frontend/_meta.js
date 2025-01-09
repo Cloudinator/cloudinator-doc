@@ -9,6 +9,16 @@ export default {
             pagination: true
         }
     },
+    react: {
+        title: 'React',
+        theme: {
+            breadcrumb: true,
+            footer: true,
+            sidebar: true,
+            toc: true,
+            pagination: true
+        }
+    },
     nextjs: {
         title: 'Nextjs',
         theme: {
@@ -30,16 +40,6 @@ export default {
                 title: 'Table of Contents',
                 backToTop: true,
             }
-        }
-    },
-    react: {
-        title: 'React',
-        theme: {
-            breadcrumb: true,
-            footer: true,
-            sidebar: true,
-            toc: true,
-            pagination: true
         }
     },
     laravel: {
