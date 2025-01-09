@@ -9,6 +9,9 @@ const withNextra = nextra({
 const nextConfig = {
   // You can specify other Next.js configuration options here if needed
   reactStrictMode: true,
+  images: {
+    domains: ["7zg3rv0nfdklwx5q.public.blob.vercel-storage.com"],
+  },
   output: "standalone",
 };
 

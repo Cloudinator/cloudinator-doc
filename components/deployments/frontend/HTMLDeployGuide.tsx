@@ -38,7 +38,7 @@ export default function HTMLDeployGuide() {
           and select '
           <span className="font-bold dark:font-semibold">Frontend</span>' in
           project type.
-          <div
+          {/* <div
             className="bg-yellow-50 dark:bg-yellow-900 border-l-4 border-yellow-400 dark:border-yellow-600 p-4 my-4"
             role="alert"
           >
@@ -59,12 +59,12 @@ export default function HTMLDeployGuide() {
                 </span>
               </Link>
             </p>
-          </div>
+          </div> */}
         </div>
       ),
       image: (
         <Image
-          src="/html-guide/create-project.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/Screenshot%202025-01-09%20083449-18vtVytC62tR1b9LAnHaw2qq0VWJWo.jpg"
           alt="Create a new HTML Static Site"
           height={1000}
           width={1000}
@@ -77,7 +77,7 @@ export default function HTMLDeployGuide() {
         "Choose the Git repository that contains your HTML files. You have the option to choose GitHub or GitLab",
       image: (
         <Image
-          src="/html-guide/git-provider.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/git-provider-vn1DaZme5cpdVcBFygLlmcZSSIUTce.jpg"
           alt="Choose Git Provider"
           height={1000}
           width={1000}
@@ -106,12 +106,13 @@ export default function HTMLDeployGuide() {
               Cloudinator will deploy your HTML files using the branch{" "}
               <span className="font-semibold dark:font-bold">main</span>
             </p>
+            <p>Make sure project structure has <span className="font-semibold dark:font-bold">index.html</span> file in root directory</p>
           </div>
         </div>
       ),
       image: (
         <Image
-          src="/html-guide/configure.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/configure-project-7weorJYCLwLj5qghw4bt5LHMte3yaM.jpg"
           alt="Configure deployment settings"
           height={1000}
           width={1000}
@@ -124,7 +125,7 @@ export default function HTMLDeployGuide() {
         "Click 'Create Frontend Project' to start the deployment process. Cloudinator will automatically build and deploy your site.",
       image: (
         <Image
-          src="/html-guide/deploy.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/project-deploy-duR1paKAdgd8TIMmkIKSJfYPlNjtAZ.jpg"
           alt="Deploy your site"
           height={1000}
           width={1000}
@@ -137,7 +138,7 @@ export default function HTMLDeployGuide() {
         "Once deployment is complete, Cloudinator will provide you with a URL to access your live site.",
       image: (
         <Image
-          src="/html-guide/success.png"
+          src="https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/success-deploy-gouaDE1fRq13zpo2HLB7SVRg7kjNj1.jpg"
           alt="Access your deployed HTML site"
           height={1000}
           width={1000}
@@ -171,7 +172,7 @@ export default function HTMLDeployGuide() {
       </div>
       <div className="mt-12 text-center">
         <Link
-          href="https://cloudinator-ui.cloudinator.cloud/"
+          href="https://cloudinator.istad.co"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-purple-600 dark:bg-purple-300 text-white dark:text-purple-800 px-6 py-3 rounded-md text-lg font-semibold hover:bg-purple-700 dark:hover:bg-purple-400 transition-colors"
