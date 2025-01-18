@@ -22,9 +22,23 @@ pipeline {
             }
         }
 
+        stage('Check for TypeScript') {
+            steps {
+                script {
+                    // Check if tsconfig.json exists
+                    if (fileExists('tsconfig.json')) {
+                        echo 'TypeScript detected. Installing @types/node...'
+                        sh 'npm install --save-dev @types/node'
+                    } else {
+                        echo 'No TypeScript detected. Skipping @types/node installation.'
+                    }
+                }
+            }
+        }
+
         stage('Build') {
             steps {
-                sh 'npm run build' // or 'yarn build'
+                sh 'npm run build'
             }
         }
 
