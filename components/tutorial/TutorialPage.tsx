@@ -155,6 +155,21 @@ const TutorialPage = () => {
         "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
+    {
+      id: 4,
+      title: "How to use Cloudinator AI",
+      description:
+        "Learn the basics of using AI generate code for deployment in Cloudiator",
+      duration: "3 mins",
+      category: "ai",
+      level: "beginner",
+      instructor: "Alex Kumar",
+      rating: 4.7,
+      progress: 45,
+      thumbnail:
+        "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
+      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    },
   ];
 
   const categories: Category[] = [
@@ -164,6 +179,7 @@ const TutorialPage = () => {
     { id: "database", name: "Database" },
     { id: "api", name: "API" },
     { id: "spring", name: "Spring Microservice" },
+    { id: "ai", name: "Cloudinator AI" },
   ];
 
   const getLevelBadgeColor = (level: string): string => {

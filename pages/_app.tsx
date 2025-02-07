@@ -9,6 +9,7 @@ import FooterBanner2 from "@/components/FooterBanner2";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
 import HeaderNav from "@/components/HeaderNav";
+import Head from "next/head";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,6 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         enableSystem
         disableTransitionOnChange
       >
+        <Head>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
         <main className={poppins.className}>
           <LoadingProvider>
             <MaintenanceBanner />
