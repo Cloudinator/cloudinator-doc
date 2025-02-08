@@ -40,7 +40,7 @@ const partners = [
         name: 'ISTAD',
         src: '/images/new-logo.png',
         height: 200,
-        width: 200   
+        width: 180   
     }
 ]
 
@@ -63,13 +63,13 @@ export default function Footer() {
 
                         {/* Navigation */}
                         <div className="md:mx-auto md:w-full lg:mx-0">
-                            <h3 className="text-lg font-semibold text-sky-600 mb-4 text-center">Content</h3>
+                            <h3 className="text-lg font-semibold text-purple-500 mb-4 text-center">Content</h3>
                             <ul className="space-y-2">
                                 {navigation.links.map((item) => (
                                     <li key={item.name} className="text-center">
                                         <Link
                                             href={item.href}
-                                            className="text-gray-600 hover:text-sky-600 dark:text-gray-400 dark:hover:text-sky-500 transition-colors"
+                                            className="text-gray-600 hover:text-purple-600 dark:text-gray-400 dark:hover:text-purple-500 transition-all ease-in-out"
                                         >
                                             {item.name}
                                         </Link>
@@ -80,26 +80,26 @@ export default function Footer() {
 
                         {/* Contact Info */}
                         <div className="md:mx-auto md:w-full lg:mx-0">
-                            <h3 className="text-lg font-semibold text-sky-600 mb-4 text-center">Contact US</h3>
+                            <h3 className="text-lg font-semibold text-purple-500 mb-4 text-center">Contact US</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start space-x-3 justify-center">
-                                    <Phone className="h-5 w-5 text-sky-600 mt-0.5" />
-                                    <span className="text-gray-600 dark:text-gray-400">{contact.phone}</span>
+                                    <Phone className="h-5 w-5 text-purple-500 mt-0.5" />
+                                    <span className="text-gray-600 dark:text-gray-400 hover:text-purple-500 transition-all ease-in-out">{contact.phone}</span>
                                 </li>
                                 <li className="flex items-start space-x-3 justify-center">
-                                    <Mail className="h-5 w-5 text-sky-600 mt-0.5" />
-                                    <span className="text-gray-600 dark:text-gray-400">{contact.email}</span>
+                                    <Mail className="h-5 w-5 text-purple-500 mt-0.5" />
+                                    <span className="text-gray-600 dark:text-gray-400 hover:text-purple-500 transition-all ease-in-out">{contact.email}</span>
                                 </li>
                                 <li className="flex items-start space-x-3 justify-center">
-                                    <MapPin className="h-5 w-5 text-sky-600 mt-0.5" />
-                                    <span className="text-gray-600 dark:text-gray-400">{contact.address}</span>
+                                    <MapPin className="h-5 w-5 text-purple-500 mt-0.5 " />
+                                    <span className="text-gray-600 dark:text-gray-400 hover:text-purple-500 transition-all ease-in-out">{contact.address}</span>
                                 </li>
                             </ul>
                         </div>
 
                         {/* Partners */}
                         <div className="space-y-4 md:mx-auto md:w-full lg:mx-0">
-                            <h3 className="text-lg font-semibold text-sky-600 mb-4 text-center">Sponsor</h3>
+                            <h3 className="text-lg font-semibold text-purple-500 mb-4 text-center">Sponsor</h3>
                             <div className="grid gap-4 sm:gap-6 justify-center">
                                 {partners.map((partner) => (
                                     <Image
@@ -118,7 +118,7 @@ export default function Footer() {
                     <Separator className="my-8" />
 
                     {/* Copyright */}
-                    <div className="text-center text-gray-600 dark:text-gray-400">
+                    <div className="text-center text-gray-600 dark:text-gray-400 hover:text-purple-500 transition-all ease-in-out">
                         <p> 2025 Copyright Cloudinator by ISTAD. All rights reserved. </p>
                     </div>
                 </div>
