@@ -12,7 +12,7 @@ const nextConfig = {
   images: {
     domains: ["7zg3rv0nfdklwx5q.public.blob.vercel-storage.com"],
   },
-  output: "standalone",
+  output: "export",
 };
 
 // Exporting the final configuration
