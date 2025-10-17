@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002F_meta","\u002Fdeployment\u002Fbackend\u002F_meta","\u002Fdeployment\u002Fdatabase\u002F_meta","\u002Fdeployment\u002Ffrontend\u002F_meta","\u002Fresource\u002Fnuxtjs\u002F_meta","\u002Fresource\u002Fspring-microservice\u002F_meta","\u002Fspring-microservice\u002F_meta"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()

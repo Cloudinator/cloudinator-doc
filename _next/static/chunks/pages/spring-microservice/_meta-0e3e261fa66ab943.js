@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[944],{1256:(_,e,n)=>{"use strict";n.r(e),n.d(e,{__N_SSG:()=>s,default:()=>u});var s=!0;let u=()=>null},4176:(_,e,n)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/spring-microservice/_meta",function(){return n(1256)}])}},_=>{_.O(0,[636,593,792],()=>_(_.s=4176)),_N_E=_.O()}]);

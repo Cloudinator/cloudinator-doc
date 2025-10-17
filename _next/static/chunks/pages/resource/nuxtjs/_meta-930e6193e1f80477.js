@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[852],{796:(_,e,u)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/resource/nuxtjs/_meta",function(){return u(9476)}])},9476:(_,e,u)=>{"use strict";u.r(e),u.d(e,{__N_SSG:()=>n,default:()=>s});var n=!0;let s=()=>null}},_=>{_.O(0,[636,593,792],()=>_(_.s=796)),_N_E=_.O()}]);
