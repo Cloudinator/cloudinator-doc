@@ -11,8 +11,9 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ["7zg3rv0nfdklwx5q.public.blob.vercel-storage.com"],
+    unoptimized: true,
   },
-  output: "standalone",
+  output: "export",
 };
 
 // Exporting the final configuration

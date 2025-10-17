@@ -1,3 +1,146 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Nextra Sidebar Styling - Purple Theme */
+.nextra-sidebar-container {
+  @apply border-r-2 border-purple-200 dark:border-purple-800 bg-gradient-to-b from-purple-50/30 to-white dark:from-purple-950/20 dark:to-gray-900;
+}
+
+/* Sidebar content wrapper */
+.nextra-sidebar {
+  @apply space-y-1;
+}
+
+/* Sidebar menu items */
+.nextra-sidebar li a {
+  @apply text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-200 rounded-md px-3 py-2 block;
+}
+
+/* Active sidebar item */
+.nextra-sidebar li.active > a,
+.nextra-sidebar li a[aria-selected="true"] {
+  @apply bg-gradient-to-r from-purple-100 to-purple-50 dark:from-purple-900/40 dark:to-purple-900/20 text-purple-700 dark:text-purple-300 font-semibold border-l-4 border-purple-600 shadow-sm;
+}
+
+/* Sidebar folder/section headers */
+.nextra-sidebar .nextra-sidebar-menu > li > button {
+  @apply text-purple-700 dark:text-purple-400 font-bold hover:text-purple-800 dark:hover:text-purple-300 transition-all duration-200 px-3 py-2 rounded-md hover:bg-purple-100/50 dark:hover:bg-purple-900/30;
+}
+
+/* Sidebar section titles */
+.nextra-sidebar > div > div > div > button,
+.nextra-sidebar-menu button {
+  @apply text-purple-800 dark:text-purple-300 font-bold uppercase text-xs tracking-wider;
+}
+
+/* Left sidebar content list styling */
+nav.nextra-sidebar-container aside,
+aside.nextra-sidebar-container {
+  @apply bg-gradient-to-br from-purple-50/50 via-white to-purple-50/30 dark:from-purple-950/30 dark:via-gray-900 dark:to-purple-950/20;
+}
+
+/* Content list items in left sidebar */
+.nextra-sidebar nav > ul > li,
+.nextra-sidebar-menu > li {
+  @apply mb-1;
+}
+
+/* Content list links with enhanced styling */
+.nextra-sidebar nav a,
+.nextra-sidebar-menu a {
+  @apply relative overflow-hidden;
+}
+
+/* Hover effect with purple glow */
+.nextra-sidebar nav a:hover,
+.nextra-sidebar-menu a:hover {
+  @apply bg-purple-50 dark:bg-purple-900/20 shadow-sm;
+}
+
+/* Active content with purple accent line */
+.nextra-sidebar nav a[aria-current="page"],
+.nextra-sidebar-menu a[aria-current="page"] {
+  @apply bg-gradient-to-r from-purple-100 via-purple-50 to-transparent dark:from-purple-900/50 dark:via-purple-900/30 dark:to-transparent text-purple-700 dark:text-purple-300 font-semibold border-l-4 border-purple-600 pl-4;
+}
+
+/* Table of Contents (TOC) Styling */
+.nextra-toc {
+  @apply border-l-2 border-purple-200 dark:border-purple-800;
+}
+
+/* TOC links */
+.nextra-toc li a {
+  @apply text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors;
+}
+
+/* Active TOC item */
+.nextra-toc li a[aria-selected="true"],
+.nextra-toc li.active > a {
+  @apply text-purple-700 dark:text-purple-400 font-semibold border-l-4 border-purple-600 -ml-0.5;
+}
+
+/* TOC heading */
+.nextra-toc > p {
+  @apply text-purple-700 dark:text-purple-400 font-bold;
+}
+
+/* Sidebar scrollbar */
+.nextra-sidebar-container::-webkit-scrollbar-thumb {
+  @apply bg-purple-300 dark:bg-purple-700 rounded-full;
+}
+
+.nextra-sidebar-container::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-400 dark:bg-purple-600;
+}
+
+/* Additional hover effects for better UX */
+.nextra-sidebar li a:hover {
+  @apply bg-purple-50 dark:bg-purple-900/20 transform translate-x-1 transition-transform duration-200;
+}
+
+/* Nested items indentation with purple accent */
+.nextra-sidebar ul ul li a {
+  @apply border-l-2 border-purple-200 dark:border-purple-800 ml-2 pl-4 hover:border-purple-400 dark:hover:border-purple-600;
+}
+
+/* Deep nested items */
+.nextra-sidebar ul ul ul li a {
+  @apply border-l-2 border-purple-300 dark:border-purple-700 ml-4 pl-4;
+}
+
+/* Sidebar list styling */
+.nextra-sidebar ul {
+  @apply space-y-0.5;
+}
+
+/* Content list item with icon or bullet */
+.nextra-sidebar li::before {
+  @apply text-purple-400 dark:text-purple-600;
+}
+
+/* Expanded folder indicator */
+.nextra-sidebar button[aria-expanded="true"] {
+  @apply text-purple-700 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30;
+}
+
+/* Collapsed folder indicator */
+.nextra-sidebar button[aria-expanded="false"] {
+  @apply text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400;
+}
+
+/* Sidebar divider between sections */
+.nextra-sidebar hr {
+  @apply border-purple-200 dark:border-purple-800 my-4;
+}
+
+/* Content list search box (if present) */
+.nextra-sidebar input[type="search"],
+.nextra-sidebar input[type="text"] {
+  @apply border-purple-200 dark:border-purple-800 focus:border-purple-500 dark:focus:border-purple-500 focus:ring-purple-500 dark:focus:ring-purple-500;
+}
+
+/* Sidebar footer or bottom section */
+.nextra-sidebar-container > div:last-child {
+  @apply border-t-2 border-purple-200 dark:border-purple-800 bg-purple-50/50 dark:bg-purple-950/30;
+}

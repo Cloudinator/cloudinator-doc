@@ -125,51 +125,6 @@ const TutorialPage = () => {
         "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/3HXWjxX-dyKecNxVJyGXcOACqBWEugXowOX274.png",
       videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     },
-    {
-      id: 2,
-      title: "How to deploy React website",
-      description:
-        "Learn the basics of deployment with cloudinator of React.js",
-      duration: "3 mins",
-      category: "frontend",
-      level: "advanced",
-      instructor: "Mike Chen",
-      rating: 4.9,
-      progress: 45,
-      thumbnail:
-        "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 3,
-      title: "How to deploy Spring Microservice",
-      description:
-        "Learn the basics of deployment with cloudinator of Spring Microservice",
-      duration: "4 mins",
-      category: "spring",
-      level: "intermediate",
-      instructor: "Alex Kumar",
-      rating: 4.7,
-      progress: 45,
-      thumbnail:
-        "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
-    {
-      id: 4,
-      title: "How to use Cloudinator AI",
-      description:
-        "Learn the basics of using AI generate code for deployment in Cloudiator",
-      duration: "3 mins",
-      category: "ai",
-      level: "beginner",
-      instructor: "Alex Kumar",
-      rating: 4.7,
-      progress: 45,
-      thumbnail:
-        "https://7zg3rv0nfdklwx5q.public.blob.vercel-storage.com/cloudinator/coming-soon-Eu8z6EjkoLEWmby2BjtlbsRxobRoYF.png",
-      videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    },
   ];
 
   const categories: Category[] = [

@@ -9,8 +9,8 @@ const themeConfig = {
   sidebar: {
     defaultMenuCollapsed: false,
     styles: {
-      item: "hover:bg-purple-400 hover:text-purple-600",
-      activeItem: "bg-[#1a73e8] text-white",
+      item: "hover:bg-purple-50 dark:hover:bg-purple-900/20 hover:text-purple-600 dark:hover:text-purple-400",
+      activeItem: "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border-l-4 border-purple-600",
     },
   },
   navbar: {

@@ -11,7 +11,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { ModeToggle } from "./ModeToggle";
+import { ModeToggle } from "../ModeToggle";
 
 export default function HeaderNav() {
   const [mounted, setMounted] = useState(false);
@@ -43,41 +43,41 @@ export default function HeaderNav() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-300 bg-white dark:border-gray-700 dark:bg-gray-900">
-      <div className="container flex h-16 items-center justify-between">
-        <div className="px-16 mr-4 flex items-center space-x-2">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-[#0d1117] shadow-sm">
+      <div className="container flex h-16 items-center justify-between px-6">
+        <div className="flex items-center space-x-3">
           <Image
             src="/images/cloudinator-v2.1.png"
             alt="Cloudinator Logo"
-            width={60}
-            height={60}
+            width={40}
+            height={40}
+            className="rounded"
           />
-          <span className="text-xl font-bold text-gray-800 dark:text-white">
+          <span className="text-xl font-semibold text-gray-900 dark:text-white">
             Cloudinator
           </span>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 items-center justify-center space-x-6">
+        <div className="hidden md:flex flex-1 items-center justify-center">
           <NavigationMenu>
-            <NavigationMenuList>
+            <NavigationMenuList className="space-x-1">
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
+                <NavigationMenuTrigger className="bg-transparent text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 font-medium text-sm">
                   Products
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-96 gap-3 md:w-[400px] bg-white dark:bg-gray-800 rounded-md shadow-lg hover:text-purple-500">
-                    <li className="row-span-3 bg-white dark:bg-gray-700 rounded-lg hover:text-purple-600 dark:hover:text-purple-400">
+                  <ul className="grid w-[320px] gap-1 p-2 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-800">
+                    <li>
                       <NavigationMenuLink asChild>
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-lg p-6 no-underline outline-none focus:shadow-md transition-colors hover:bg-gray-100 dark:hover:bg-purple-900"
-                          href="https://cloudinator.istad.co"
-                          target="_blank"
+                          className="flex flex-col rounded-md p-4 no-underline outline-none transition-colors hover:bg-purple-50 dark:hover:bg-purple-950/30 group"
+                          href="#"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium text-gray-800 dark:text-white">
+                          <div className="mb-1 text-sm font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400">
                             Cloudinator Platform
                           </div>
-                          <p className="text-sm leading-tight text-gray-600 dark:text-gray-300">
+                          <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                             IaC Advanced platform for developers to deploy
                             services.
                           </p>
@@ -88,22 +88,22 @@ export default function HeaderNav() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400">
+                <NavigationMenuTrigger className="bg-transparent text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 font-medium text-sm">
                   Resources
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid w-96 md:w-[400px] bg-white dark:bg-gray-800 rounded-md shadow-lg">
+                  <ul className="grid w-[320px] gap-1 p-2 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-800">
                     {resources.map((resource) => (
                       <li key={resource.title}>
                         <NavigationMenuLink asChild>
                           <a
-                            className="block select-none space-y-1 rounded-lg p-6 leading-none no-underline outline-none transition-colors hover:bg-gray-100 dark:hover:bg-purple-900"
+                            className="block rounded-md p-4 no-underline outline-none transition-colors hover:bg-purple-50 dark:hover:bg-purple-950/30 group"
                             href={resource.href}
                           >
-                            <div className="text-sm font-medium leading-none text-gray-800 dark:text-white">
+                            <div className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 mb-1">
                               {resource.title}
                             </div>
-                            <p className="text-sm leading-snug text-gray-500 dark:text-gray-400">
+                            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                               {resource.description}
                             </p>
                           </a>
@@ -116,7 +116,7 @@ export default function HeaderNav() {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
-                  className={`${navigationMenuTriggerStyle()} text-gray-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400`}
+                  className={`${navigationMenuTriggerStyle()} bg-transparent text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 font-medium text-sm`}
                 >
                   <a href="/about">About</a>
                 </NavigationMenuLink>
@@ -124,7 +124,7 @@ export default function HeaderNav() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center justify-end ml-auto">
           <ModeToggle />
         </div>
       </div>
